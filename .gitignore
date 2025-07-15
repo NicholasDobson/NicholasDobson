@@ -80,3 +80,9 @@ assets/
 # Package lock files (optional - uncomment if you want to ignore)
 # package-lock.json
 # yarn.lock
+
+# Platane/snk repository clone (reference only, don't commit)
+snk/
+
+# Platane/snk repository clone (reference only, don't commit)
+snk/
