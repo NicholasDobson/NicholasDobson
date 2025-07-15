@@ -93,7 +93,12 @@
 <div align="center">
   <h2>🧟‍♂️ ZOMBIE INFILTRATING MY GITHUB CONTRIBUTIONS 🧟‍♂️</h2>
   
-
+  <!-- Animated Zombie Contributions -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-github.svg?v=2">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-github.svg?v=2">
+    <img alt="🧟‍♂️ Zombie infiltrating my GitHub contributions" src="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-github.svg?v=2">
+  </picture>
   
   <details>
   <summary>🧟‍♂️ About the Zombie Animation</summary>
