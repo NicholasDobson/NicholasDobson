@@ -4,6 +4,7 @@
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=Righteous&size=45&duration=4980&pause=950&center=true&vCenter=true&multiline=true&random=true&width=435&lines=Hi+There+👋;I'm+Nicholas+Dobson!" alt="Hi There I'm Nicholas Dobson;" />
  </a>
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Righteous&size=45&duration=4980&pause=950&center=true&vCenter=true&multiline=true&random=true&width=435&lines=Hi+there+%F0%9F%91%8B;I'm+Nicholas+Dobson" alt="Typing SVG" /></a>
 </h1>
 
 **NicholasDobson/NicholasDobson** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
