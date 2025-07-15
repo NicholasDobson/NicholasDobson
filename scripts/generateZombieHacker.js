@@ -8,35 +8,45 @@ const __dirname = path.dirname(__filename);
 // Configuration
 const GRID_WIDTH = 52;
 const GRID_HEIGHT = 7;
-const CELL_SIZE = 12;
-const ANIMATION_DURATION = 30; // seconds for full cycle
+const CELL_SIZE = 11;
+const CELL_GAP = 3;
+const ANIMATION_DURATION = 20; // seconds for full cycle
 
 // Generate SVG for zombie hacker animation
 async function generateZombieHackerSVG(contributionData, theme = 'dark') {
-    const width = GRID_WIDTH * (CELL_SIZE + 2) + 100;
-    const height = GRID_HEIGHT * (CELL_SIZE + 2) + 150;
+    const gridWidth = GRID_WIDTH * (CELL_SIZE + CELL_GAP) - CELL_GAP;
+    const gridHeight = GRID_HEIGHT * (CELL_SIZE + CELL_GAP) - CELL_GAP;
+    const padding = 40;
+    const width = gridWidth + (padding * 2);
+    const height = gridHeight + 120;
     
     // Theme colors
     const themes = {
         dark: {
             bg: '#0d1117',
-            border: '#00ff00',
-            text: '#00ff00',
+            cardBg: '#161b22',
+            border: '#30363d',
+            accent: '#58a6ff',
+            text: '#f0f6fc',
+            textSecondary: '#7d8590',
             cell: '#161b22',
-            cellBorder: '#30363d',
             levels: ['#0e4429', '#006d32', '#26a641', '#39d353'],
-            infected: '#ff0000',
-            zombie: '#00ff00'
+            infected: '#f85149',
+            zombie: '#ffa657',
+            matrix: '#7c3aed'
         },
         light: {
             bg: '#ffffff',
-            border: '#00aa00',
-            text: '#00aa00',
+            cardBg: '#f6f8fa',
+            border: '#d0d7de',
+            accent: '#0969da',
+            text: '#24292f',
+            textSecondary: '#656d76',
             cell: '#ebedf0',
-            cellBorder: '#d0d7de',
             levels: ['#9be9a8', '#40c463', '#30a14e', '#216e39'],
-            infected: '#cc0000',
-            zombie: '#00aa00'
+            infected: '#d1242f',
+            zombie: '#fb8500',
+            matrix: '#8b5cf6'
         }
     };
     
@@ -49,77 +59,112 @@ async function generateZombieHackerSVG(contributionData, theme = 'dark') {
   <defs>
     <style>
       .bg { fill: ${colors.bg}; }
-      .border { fill: none; stroke: ${colors.border}; stroke-width: 2; }
-      .text { fill: ${colors.text}; font-family: 'Courier New', monospace; font-size: 12px; }
-      .cell { stroke: ${colors.cellBorder}; stroke-width: 1; }
-      .infected { fill: ${colors.infected}; filter: drop-shadow(0 0 3px ${colors.infected}); }
-      .zombie { fill: ${colors.zombie}; font-size: 10px; }
-      .matrix { fill: ${colors.text}; opacity: 0.3; font-family: monospace; font-size: 8px; }
-      .glow { filter: drop-shadow(0 0 3px ${colors.border}); }
+      .card-bg { fill: ${colors.cardBg}; }
+      .border { fill: none; stroke: ${colors.border}; stroke-width: 1; }
+      .accent-border { stroke: ${colors.accent}; stroke-width: 2; }
+      .text { fill: ${colors.text}; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+      .text-secondary { fill: ${colors.textSecondary}; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+      .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace; }
+      .cell { stroke: ${colors.border}; stroke-width: 0.5; }
+      .infected { fill: ${colors.infected} !important; filter: drop-shadow(0 0 4px ${colors.infected}66); }
+      .zombie { fill: ${colors.zombie}; font-size: 12px; }
+      .matrix { fill: ${colors.matrix}; opacity: 0.6; font-family: monospace; font-size: 6px; }
+      .glow { filter: drop-shadow(0 0 8px ${colors.accent}66); }
       
       @keyframes matrixRain {
-        0% { transform: translateY(-20px); opacity: 0; }
-        50% { opacity: 1; }
-        100% { transform: translateY(${height}px); opacity: 0; }
+        0% { transform: translateY(-30px); opacity: 0; }
+        10% { opacity: 0.8; }
+        90% { opacity: 0.8; }
+        100% { transform: translateY(${height + 30}px); opacity: 0; }
       }
       
       @keyframes scanLine {
         0% { transform: translateX(-100%); opacity: 0; }
-        50% { opacity: 1; }
-        100% { transform: translateX(${width}px); opacity: 0; }
-      }
-      
-      @keyframes hackPulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.2); }
+        50% { opacity: 0.8; }
+        100% { transform: translateX(${width + 100}px); opacity: 0; }
       }
       
       @keyframes zombieMove {
-        0% { transform: translate(0, 0); }
-        100% { transform: translate(${hackSequence.length * (CELL_SIZE + 2)}px, 0); }
+        0% { transform: translate(0, 0) scale(1); }
+        100% { transform: translate(${gridWidth}px, 0) scale(1); }
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
       }
     </style>
+    
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:${colors.bg};stop-opacity:1" />
+      <stop offset="100%" style="stop-color:${colors.cardBg};stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
   
   <!-- Background -->
-  <rect class="bg" width="${width}" height="${height}" rx="8"/>
+  <rect width="${width}" height="${height}" fill="url(#bgGradient)" rx="6"/>
   
-  <!-- Border -->
-  <rect class="border glow" x="5" y="5" width="${width - 10}" height="${height - 10}" rx="8"/>
+  <!-- Main container -->
+  <rect class="card-bg border" x="10" y="10" width="${width - 20}" height="${height - 20}" rx="6"/>
   
-  <!-- Title -->
-  <text class="text glow" x="${width / 2}" y="30" text-anchor="middle" font-size="14" font-weight="bold">
-    🧟‍♂️ ZOMBIE HACKER INFILTRATING GITHUB MATRIX 🧟‍♂️
-  </text>
+  <!-- Header -->
+  <text class="text" x="${width / 2}" y="35" text-anchor="middle" font-size="16" font-weight="600">
+    🧟‍♂️ Zombie Hacker Infiltration Status
+  </text>`;
   
-  <!-- Matrix rain effect -->`;
-  
-    // Add matrix rain
-    for (let i = 0; i < 15; i++) {
-        const x = Math.random() * width;
-        const delay = Math.random() * 5;
+    // Add subtle matrix rain effect
+    for (let i = 0; i < 8; i++) {
+        const x = 20 + (i * (width - 40) / 7);
+        const delay = Math.random() * 4;
+        const chars = ['0', '1', '█', '▓', '▒', '░', '♦', '♠'];
         svg += `
-  <text class="matrix" x="${x}" y="0" style="animation: matrixRain 5s linear infinite; animation-delay: ${delay}s;">
-    ${Math.random() > 0.5 ? '01010110' : 'ハッキング'}
+  <text class="matrix" x="${x}" y="0" style="animation: matrixRain 6s linear infinite; animation-delay: ${delay}s;">
+    ${chars[Math.floor(Math.random() * chars.length)]}
   </text>`;
     }
     
     // Add scan line
     svg += `
-  <rect x="0" y="${height / 2}" width="100%" height="2" fill="${colors.border}" opacity="0.5" style="animation: scanLine 3s linear infinite;"/>
+  <rect x="0" y="${height / 2}" width="100%" height="1" fill="${colors.accent}" opacity="0.3" style="animation: scanLine 4s linear infinite;"/>
   `;
     
     // Contribution grid
     svg += `
-  <g transform="translate(50, 60)">`;
+  <g transform="translate(${padding}, 60)">`;
+    
+    // Month labels
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    for (let i = 0; i < 12; i++) {
+        const x = (i * gridWidth / 12) + 10;
+        svg += `
+    <text class="text-secondary" x="${x}" y="-5" font-size="9" text-anchor="start">${months[i]}</text>`;
+    }
+    
+    // Day labels
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    for (let i = 0; i < 7; i++) {
+        if (i % 2 === 1) { // Only show every other day to avoid crowding
+            const y = i * (CELL_SIZE + CELL_GAP) + CELL_SIZE / 2 + 3;
+            svg += `
+    <text class="text-secondary" x="-15" y="${y}" font-size="8" text-anchor="end">${days[i].slice(0, 1)}</text>`;
+        }
+    }
     
     // Draw contribution cells
     contributionData.forEach((cell, index) => {
-        const x = cell.week * (CELL_SIZE + 2);
-        const y = cell.day * (CELL_SIZE + 2);
+        const x = cell.week * (CELL_SIZE + CELL_GAP);
+        const y = cell.day * (CELL_SIZE + CELL_GAP);
         
         let cellColor = colors.cell;
-        if (cell.level > 0) {
+        if (cell.level > 0 && cell.level <= colors.levels.length) {
             cellColor = colors.levels[cell.level - 1];
         }
         
@@ -134,7 +179,7 @@ async function generateZombieHackerSVG(contributionData, theme = 'dark') {
             const hackDelay = (hackTime / hackSequence.length) * ANIMATION_DURATION;
             svg += `
       <animate attributeName="fill" values="${cellColor};${colors.infected};${colors.infected}" dur="${ANIMATION_DURATION}s" begin="${hackDelay}s" fill="freeze"/>
-      <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="0.5s" begin="${hackDelay}s"/>`;
+      <animateTransform attributeName="transform" type="scale" values="1;1.3;1" dur="0.3s" begin="${hackDelay}s"/>`;
         }
         
         svg += `
@@ -144,20 +189,20 @@ async function generateZombieHackerSVG(contributionData, theme = 'dark') {
         if (isHacked) {
             const hackDelay = (hackTime / hackSequence.length) * ANIMATION_DURATION;
             svg += `
-    <text x="${x + CELL_SIZE/2}" y="${y + CELL_SIZE/2 + 3}" text-anchor="middle" font-size="8" opacity="0">
+    <text x="${x + CELL_SIZE/2}" y="${y + CELL_SIZE/2 + 2}" text-anchor="middle" font-size="7" opacity="0">
       💀
-      <animate attributeName="opacity" values="0;1;1" dur="${ANIMATION_DURATION}s" begin="${hackDelay + 0.5}s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1;1" dur="${ANIMATION_DURATION}s" begin="${hackDelay + 0.3}s" fill="freeze"/>
     </text>`;
         }
     });
     
-    // Zombie hacker character
+    // Zombie hacker character with improved path
     const zombiePath = generateZombiePath(hackSequence);
     svg += `
     <g class="zombie">
-      <text font-size="14" text-anchor="middle">
+      <text font-size="16" text-anchor="middle" filter="url(#glow)">
         🧟‍♂️
-        <animateMotion dur="${ANIMATION_DURATION}s" repeatCount="indefinite">
+        <animateMotion dur="${ANIMATION_DURATION}s" repeatCount="indefinite" rotate="auto">
           <path d="${zombiePath}"/>
         </animateMotion>
       </text>
@@ -166,31 +211,32 @@ async function generateZombieHackerSVG(contributionData, theme = 'dark') {
     svg += `
   </g>`;
     
-    // Status display
+    // Stats panel
     const totalCells = contributionData.filter(c => c.level > 0).length;
     const hackedCells = hackSequence.length;
+    const totalContributions = contributionData.reduce((sum, cell) => sum + (cell.count || 0), 0);
     
     svg += `
-  <!-- Status display -->
-  <text class="text" x="${width - 10}" y="80" text-anchor="end" font-size="10">
-    SYSTEMS BREACHED: ${hackedCells}
-  </text>
-  <text class="text" x="${width - 10}" y="95" text-anchor="end" font-size="10">
-    TOTAL SYSTEMS: ${totalCells}
-  </text>
-  <text class="text" x="${width - 10}" y="110" text-anchor="end" font-size="10">
-    STATUS: INFILTRATING
-  </text>
+  <!-- Stats panel -->
+  <g transform="translate(${width - 180}, ${height - 50})">
+    <rect class="card-bg border" x="0" y="0" width="170" height="40" rx="4"/>
+    <text class="text mono" x="8" y="15" font-size="10" font-weight="600">INFILTRATION STATUS</text>
+    <text class="text-secondary mono" x="8" y="28" font-size="9">Systems: ${hackedCells}/${totalCells}</text>
+    <text class="text-secondary mono" x="8" y="37" font-size="9">Commits: ${totalContributions}</text>
+  </g>
   
   <!-- Progress bar -->
-  <rect x="${width - 150}" y="120" width="140" height="8" fill="${colors.cell}" stroke="${colors.border}" rx="4"/>
-  <rect x="${width - 148}" y="122" width="${(hackedCells / totalCells) * 136}" height="4" fill="${colors.infected}" rx="2">
-    <animate attributeName="width" from="0" to="${(hackedCells / totalCells) * 136}" dur="${ANIMATION_DURATION}s" fill="freeze"/>
-  </rect>
+  <g transform="translate(20, ${height - 35})">
+    <rect x="0" y="0" width="200" height="4" fill="${colors.border}" rx="2"/>
+    <rect x="0" y="0" width="${Math.min(200, (hackedCells / Math.max(totalCells, 1)) * 200)}" height="4" fill="${colors.infected}" rx="2">
+      <animate attributeName="width" from="0" to="${Math.min(200, (hackedCells / Math.max(totalCells, 1)) * 200)}" dur="${ANIMATION_DURATION}s" fill="freeze"/>
+    </rect>
+    <text class="text-secondary mono" x="0" y="-5" font-size="9">Infiltration Progress</text>
+  </g>
   
   <!-- Footer -->
-  <text class="text glow" x="${width / 2}" y="${height - 10}" text-anchor="middle" font-size="10">
-    🚀 GITHUB CONTRIBUTION MATRIX COMPROMISED 🚀
+  <text class="text-secondary" x="${width / 2}" y="${height - 8}" text-anchor="middle" font-size="8">
+    Real GitHub contribution data • Updated automatically
   </text>
   
 </svg>`;
@@ -199,29 +245,62 @@ async function generateZombieHackerSVG(contributionData, theme = 'dark') {
 }
 
 function generateHackSequence(contributionData) {
-    // Create a hacking sequence - zombie moves through cells with contributions
+    // Create a more strategic hacking sequence
     const validCells = contributionData.filter(cell => cell.level > 0);
     
-    // Sort by week, then by day for a logical progression
+    if (validCells.length === 0) {
+        // Fallback: create some interesting cells to hack
+        return contributionData.slice(0, 20);
+    }
+    
+    // Sort by contribution level (highest first) and then by position
     validCells.sort((a, b) => {
+        if (a.level !== b.level) return b.level - a.level; // Higher level first
+        if (a.week !== b.week) return a.week - b.week;     // Then by week
+        return a.day - b.day;                              // Then by day
+    });
+    
+    // Take a good mix - high-value targets and some progression
+    const maxCells = Math.min(validCells.length, 35);
+    const highValueTargets = validCells.slice(0, Math.floor(maxCells * 0.7));
+    const progressiveTargets = validCells.slice(Math.floor(maxCells * 0.7), maxCells);
+    
+    // Combine and sort by position for logical movement
+    const sequence = [...highValueTargets, ...progressiveTargets];
+    sequence.sort((a, b) => {
         if (a.week !== b.week) return a.week - b.week;
         return a.day - b.day;
     });
     
-    // Take a subset for animation (too many would be overwhelming)
-    const maxCells = Math.min(validCells.length, 50);
-    return validCells.slice(0, maxCells);
+    return sequence;
 }
 
 function generateZombiePath(hackSequence) {
     if (hackSequence.length === 0) return "M 0 0";
     
-    let path = `M ${hackSequence[0].week * (CELL_SIZE + 2) + CELL_SIZE/2} ${hackSequence[0].day * (CELL_SIZE + 2) + CELL_SIZE/2}`;
+    // Start from the first cell
+    const startX = hackSequence[0].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+    const startY = hackSequence[0].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
     
+    let path = `M ${startX} ${startY}`;
+    
+    // Create a smooth path through the cells with some curves
     for (let i = 1; i < hackSequence.length; i++) {
-        const x = hackSequence[i].week * (CELL_SIZE + 2) + CELL_SIZE/2;
-        const y = hackSequence[i].day * (CELL_SIZE + 2) + CELL_SIZE/2;
-        path += ` L ${x} ${y}`;
+        const x = hackSequence[i].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+        const y = hackSequence[i].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+        
+        if (i === 1) {
+            path += ` L ${x} ${y}`;
+        } else {
+            // Add some curve for more interesting movement
+            const prevX = hackSequence[i-1].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+            const prevY = hackSequence[i-1].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+            
+            const controlX = (prevX + x) / 2;
+            const controlY = (prevY + y) / 2 + (Math.random() - 0.5) * 20;
+            
+            path += ` Q ${controlX} ${controlY} ${x} ${y}`;
+        }
     }
     
     return path;
