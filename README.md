@@ -108,7 +108,7 @@
   - **Real GitHub Data**: Uses your actual contribution history  
   - **Zombie Theme**: Cells turn red and show infection effects when the zombie visits them
   - **Perfect Timing**: Infections happen exactly when the zombie moves over each cell
-  - **Auto-Generated**: Updates automatically with your latest contributions
+  - **Auto-Generated**: Updates automatically with my latest contributions
   
   </details>
 </div>
