@@ -178,8 +178,8 @@ async function generateZombieHackerSVG(contributionData, theme = 'dark') {
         if (isHacked) {
             const hackDelay = (hackTime / hackSequence.length) * ANIMATION_DURATION;
             svg += `
-      <animate attributeName="fill" values="${cellColor};${colors.infected};${colors.infected}" dur="${ANIMATION_DURATION}s" begin="${hackDelay}s" fill="freeze"/>
-      <animateTransform attributeName="transform" type="scale" values="1;1.3;1" dur="0.3s" begin="${hackDelay}s"/>`;
+      <animate attributeName="fill" values="${cellColor};${colors.infected};${colors.infected}" dur="0.5s" begin="${hackDelay}s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" values="1;1.4;1.1" dur="0.5s" begin="${hackDelay}s" fill="freeze"/>`;
         }
         
         svg += `
@@ -191,7 +191,8 @@ async function generateZombieHackerSVG(contributionData, theme = 'dark') {
             svg += `
     <text x="${x + CELL_SIZE/2}" y="${y + CELL_SIZE/2 + 2}" text-anchor="middle" font-size="7" opacity="0">
       💀
-      <animate attributeName="opacity" values="0;1;1" dur="${ANIMATION_DURATION}s" begin="${hackDelay + 0.3}s" fill="freeze"/>
+      <animate attributeName="opacity" values="0;1;1" dur="0.3s" begin="${hackDelay + 0.2}s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" values="0;1.2;1" dur="0.3s" begin="${hackDelay + 0.2}s" fill="freeze"/>
     </text>`;
         }
     });
@@ -202,11 +203,24 @@ async function generateZombieHackerSVG(contributionData, theme = 'dark') {
     <g class="zombie">
       <text font-size="16" text-anchor="middle" filter="url(#glow)">
         🧟‍♂️
-        <animateMotion dur="${ANIMATION_DURATION}s" repeatCount="indefinite" rotate="auto">
+        <animateMotion dur="${ANIMATION_DURATION}s" repeatCount="indefinite">
           <path d="${zombiePath}"/>
         </animateMotion>
       </text>
     </g>`;
+    
+    // Add infection trail - shows zombie's path
+    hackSequence.forEach((cell, index) => {
+        const x = cell.week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+        const y = cell.day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+        const delay = (index / hackSequence.length) * ANIMATION_DURATION;
+        
+        svg += `
+    <circle cx="${x}" cy="${y}" r="2" fill="${colors.zombie}" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="1s" begin="${delay}s"/>
+      <animate attributeName="r" values="2;8;2" dur="1s" begin="${delay}s"/>
+    </circle>`;
+    });
     
     svg += `
   </g>`;
@@ -245,31 +259,46 @@ async function generateZombieHackerSVG(contributionData, theme = 'dark') {
 }
 
 function generateHackSequence(contributionData) {
-    // Create a more strategic hacking sequence
+    // Create a more strategic hacking sequence that looks like actual movement
     const validCells = contributionData.filter(cell => cell.level > 0);
     
     if (validCells.length === 0) {
-        // Fallback: create some interesting cells to hack
-        return contributionData.slice(0, 20);
+        // Fallback: create some interesting cells to hack in a logical path
+        return contributionData.slice(0, 30).filter((cell, index) => index % 3 === 0);
     }
     
-    // Sort by contribution level (highest first) and then by position
+    // Start with highest value cells but arrange them in a more logical movement pattern
     validCells.sort((a, b) => {
-        if (a.level !== b.level) return b.level - a.level; // Higher level first
-        if (a.week !== b.week) return a.week - b.week;     // Then by week
-        return a.day - b.day;                              // Then by day
+        // Primary sort: by contribution level (higher first)
+        if (a.level !== b.level) return b.level - a.level;
+        // Secondary sort: by week (left to right progression)
+        if (a.week !== b.week) return a.week - b.week;
+        // Tertiary sort: by day
+        return a.day - b.day;
     });
     
-    // Take a good mix - high-value targets and some progression
-    const maxCells = Math.min(validCells.length, 35);
-    const highValueTargets = validCells.slice(0, Math.floor(maxCells * 0.7));
-    const progressiveTargets = validCells.slice(Math.floor(maxCells * 0.7), maxCells);
+    // Take high-value targets but limit to create smooth movement
+    const maxCells = Math.min(validCells.length, 25);
+    let sequence = validCells.slice(0, maxCells);
     
-    // Combine and sort by position for logical movement
-    const sequence = [...highValueTargets, ...progressiveTargets];
+    // Re-sort the sequence to create a logical left-to-right, top-to-bottom movement pattern
     sequence.sort((a, b) => {
-        if (a.week !== b.week) return a.week - b.week;
-        return a.day - b.day;
+        // Group by approximate week ranges for smoother movement
+        const aWeekGroup = Math.floor(a.week / 4);
+        const bWeekGroup = Math.floor(b.week / 4);
+        
+        if (aWeekGroup !== bWeekGroup) return aWeekGroup - bWeekGroup;
+        
+        // Within the same week group, alternate direction based on week
+        if (aWeekGroup % 2 === 0) {
+            // Even groups: top to bottom
+            if (a.day !== b.day) return a.day - b.day;
+            return a.week - b.week;
+        } else {
+            // Odd groups: bottom to top (creates snake-like movement)
+            if (a.day !== b.day) return b.day - a.day;
+            return a.week - b.week;
+        }
     });
     
     return sequence;
@@ -278,30 +307,42 @@ function generateHackSequence(contributionData) {
 function generateZombiePath(hackSequence) {
     if (hackSequence.length === 0) return "M 0 0";
     
-    // Start from the first cell
-    const startX = hackSequence[0].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+    // Start from off-screen left and move to the first cell
+    const startX = -20;
     const startY = hackSequence[0].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+    const firstX = hackSequence[0].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+    const firstY = hackSequence[0].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
     
-    let path = `M ${startX} ${startY}`;
+    let path = `M ${startX} ${startY} L ${firstX} ${firstY}`;
     
-    // Create a smooth path through the cells with some curves
+    // Create a path through all the hack sequence points
     for (let i = 1; i < hackSequence.length; i++) {
         const x = hackSequence[i].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
         const y = hackSequence[i].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
         
-        if (i === 1) {
-            path += ` L ${x} ${y}`;
-        } else {
-            // Add some curve for more interesting movement
-            const prevX = hackSequence[i-1].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
-            const prevY = hackSequence[i-1].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
-            
+        // Add some curve for more interesting movement
+        const prevX = hackSequence[i-1].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+        const prevY = hackSequence[i-1].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+        
+        // Use smooth curves between distant points, straight lines for adjacent ones
+        const distance = Math.abs(x - prevX) + Math.abs(y - prevY);
+        
+        if (distance > (CELL_SIZE + CELL_GAP) * 2) {
+            // Add a curve for longer distances
             const controlX = (prevX + x) / 2;
-            const controlY = (prevY + y) / 2 + (Math.random() - 0.5) * 20;
-            
+            const controlY = (prevY + y) / 2 + (Math.random() - 0.5) * 15;
             path += ` Q ${controlX} ${controlY} ${x} ${y}`;
+        } else {
+            // Straight line for adjacent cells
+            path += ` L ${x} ${y}`;
         }
     }
+    
+    // End by moving off-screen right
+    const lastX = hackSequence[hackSequence.length - 1].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+    const lastY = hackSequence[hackSequence.length - 1].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+    const endX = (GRID_WIDTH * (CELL_SIZE + CELL_GAP)) + 20;
+    path += ` L ${endX} ${lastY}`;
     
     return path;
 }

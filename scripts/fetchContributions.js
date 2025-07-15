@@ -73,8 +73,9 @@ async function getContributions() {
     console.log(`👤 Target username: ${username}`);
     
     if (!githubToken) {
-      console.log('⚠️  No GitHub token found, generating zombie data...');
-      generateZombieContributionData();
+      console.log('⚠️  No GitHub token found, using realistic demo data...');
+      console.log('💡 In GitHub Actions, the token will be provided automatically');
+      generateRealisticContributionData();
       return;
     }
 
@@ -84,8 +85,8 @@ async function getContributions() {
     const cells = await getGithubUserContribution(username, { githubToken });
     
     if (!cells || cells.length === 0) {
-      console.log('⚠️  No contributions found, generating zombie data...');
-      generateZombieContributionData();
+      console.log('⚠️  No contributions found, using realistic demo data...');
+      generateRealisticContributionData();
       return;
     }
 
@@ -103,8 +104,8 @@ async function getContributions() {
     
   } catch (error) {
     console.error('💥 Infiltration failed:', error.message);
-    console.log('🧟‍♂️ Falling back to zombie-generated data...');
-    generateZombieContributionData();
+    console.log('🧟‍♂️ Falling back to realistic demo data...');
+    generateRealisticContributionData();
   }
 }
 
@@ -132,6 +133,68 @@ function transformContributionData(cells) {
   });
   
   return zombieData;
+}
+
+function generateRealisticContributionData() {
+  console.log('🧟‍♂️ Generating realistic contribution matrix for demo...');
+  
+  const zombieData = [];
+  const GRID_WIDTH = 52;
+  const GRID_HEIGHT = 7;
+  
+  // Create a more realistic pattern based on typical developer activity
+  for (let week = 0; week < GRID_WIDTH; week++) {
+    for (let day = 0; day < GRID_HEIGHT; day++) {
+      let level = 0;
+      
+      // More activity on weekdays (Mon-Fri = days 1-5)
+      const isWeekday = day >= 1 && day <= 5;
+      const isWeekend = day === 0 || day === 6;
+      
+      // Create periods of high/low activity
+      const activityPeriod = Math.sin((week / 52) * Math.PI * 4) * 0.5 + 0.5;
+      const randomness = Math.random();
+      
+      if (isWeekday) {
+        // Higher activity on weekdays
+        if (activityPeriod > 0.7 && randomness > 0.2) level = 4;
+        else if (activityPeriod > 0.5 && randomness > 0.3) level = 3;
+        else if (activityPeriod > 0.3 && randomness > 0.4) level = 2;
+        else if (randomness > 0.6) level = 1;
+      } else if (isWeekend) {
+        // Lower activity on weekends
+        if (activityPeriod > 0.8 && randomness > 0.7) level = 2;
+        else if (randomness > 0.8) level = 1;
+      }
+      
+      // Add some vacation periods (no activity for a few weeks)
+      if ((week >= 20 && week <= 22) || (week >= 45 && week <= 47)) {
+        level = Math.random() > 0.9 ? 1 : 0;
+      }
+      
+      zombieData.push({
+        week,
+        day,
+        level,
+        id: `${week}-${day}`,
+        date: new Date(Date.now() - (GRID_WIDTH - week) * 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+        count: level * Math.floor(Math.random() * 5 + 1),
+        infected: false
+      });
+    }
+  }
+  
+  const outputPath = path.join(__dirname, '..', 'public', 'data.json');
+  fs.writeFileSync(outputPath, JSON.stringify(zombieData, null, 2));
+  
+  const totalContributions = zombieData.reduce((sum, cell) => sum + cell.count, 0);
+  const activeDays = zombieData.filter(cell => cell.level > 0).length;
+  
+  console.log('✅ Realistic demo contribution matrix generated!');
+  console.log(`💀 ${zombieData.length} cells ready for infection`);
+  console.log(`📊 Total contributions: ${totalContributions}`);
+  console.log(`📊 Active days: ${activeDays}`);
+  console.log(`📁 Data written to: ${outputPath}`);
 }
 
 function generateZombieContributionData() {
