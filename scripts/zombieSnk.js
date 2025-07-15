@@ -5,6 +5,24 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Load environment variables from .env file if it exists
+function loadEnvFile() {
+    const envPath = path.join(__dirname, '..', '.env');
+    if (fs.existsSync(envPath)) {
+        const envContent = fs.readFileSync(envPath, 'utf8');
+        envContent.split('\n').forEach(line => {
+            const [key, value] = line.split('=');
+            if (key && value) {
+                process.env[key.trim()] = value.trim().replace(/^["']|["']$/g, '');
+            }
+        });
+        console.log('✅ Loaded environment variables from .env file');
+    }
+}
+
+// Load .env before anything else
+loadEnvFile();
+
 // Polyfill fetch for Node.js if not available
 if (!globalThis.fetch) {
     const { default: fetch } = await import('node-fetch');
@@ -184,8 +202,8 @@ async function createZombieContributionSVG(contributionData, theme = ZOMBIE_THEM
 // Create living cells exactly like Platane/snk - tracks when zombie visits each cell
 function createLivingCells(contributionData, zombiePath) {
     const livingCells = contributionData.map(cell => ({
-        x: cell.week,
-        y: cell.day,
+        x: cell.x || cell.week,
+        y: cell.y || cell.day,
         t: null, // Will be set when zombie visits this cell
         color: cell.level,
         level: cell.level
@@ -199,9 +217,9 @@ function createLivingCells(contributionData, zombiePath) {
         // Find the cell at this position
         const cell = livingCells.find(c => c.x === zombieX && c.y === zombieY);
         if (cell && cell.level > 0 && cell.t === null) {
-            // Zombie visits this cell - mark the time
+            // Zombie visits this cell - mark the time (using Platane/snk timing)
             cell.t = i / zombiePath.length;
-            console.log(`Zombie visits cell (${zombieX}, ${zombieY}) at time ${cell.t}`);
+            console.log(`Zombie visits cell (${zombieX}, ${zombieY}) at time ${cell.t.toFixed(3)}`);
         }
     }
     
@@ -231,10 +249,15 @@ function generateZombiePath(contributionData) {
         return path;
     }
     
-    // Sort cells by week then day for natural progression
+    // Sort cells by x (week) then y (day) for natural progression like Platane/snk
     activeCells.sort((a, b) => {
-        if (a.week !== b.week) return a.week - b.week;
-        return a.day - b.day;
+        const aX = a.x || a.week;
+        const bX = b.x || b.week;
+        const aY = a.y || a.day;
+        const bY = b.y || b.day;
+        
+        if (aX !== bX) return aX - bX;
+        return aY - bY;
     });
     
     // Create zigzag path through active cells like original snake
@@ -242,8 +265,11 @@ function generateZombiePath(contributionData) {
     const weekGroups = {};
     
     activeCells.forEach(cell => {
-        if (!weekGroups[cell.week]) weekGroups[cell.week] = [];
-        weekGroups[cell.week].push({ x: cell.week, y: cell.day });
+        const x = cell.x || cell.week;
+        const y = cell.y || cell.day;
+        
+        if (!weekGroups[x]) weekGroups[x] = [];
+        weekGroups[x].push({ x, y });
     });
     
     Object.keys(weekGroups).sort((a, b) => a - b).forEach((week, weekIndex) => {
@@ -323,20 +349,22 @@ function generateZombieKeyframes(path) {
     }).join(' ');
 }
 
-// Fetch actual GitHub contributions
+// Fetch GitHub contributions using EXACT same approach as Platane/snk
 async function fetchGitHubContributions(username = 'NicholasDobson') {
     try {
-        console.log(`📊 Fetching real GitHub contributions for ${username}...`);
+        console.log(`📊 Fetching real GitHub contributions for ${username} (using Platane/snk method)...`);
         
-        // GitHub GraphQL API query to get contribution data
+        // Use EXACT same GraphQL query as Platane/snk packages/github-user-contribution/index.ts
         const query = `
-        query($username: String!) {
-          user(login: $username) {
+        query ($login: String!) {
+          user(login: $login) {
             contributionsCollection {
               contributionCalendar {
                 weeks {
                   contributionDays {
                     contributionCount
+                    contributionLevel
+                    weekday
                     date
                   }
                 }
@@ -348,54 +376,62 @@ async function fetchGitHubContributions(username = 'NicholasDobson') {
         const response = await fetch('https://api.github.com/graphql', {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${process.env.GITHUB_TOKEN || 'ghp_fake_token'}`,
+                'Authorization': `bearer ${process.env.GITHUB_TOKEN || 'ghp_fake_token'}`,
                 'Content-Type': 'application/json',
+                'User-Agent': 'zombie-github-generator'
             },
             body: JSON.stringify({
                 query,
-                variables: { username }
+                variables: { login: username }
             })
         });
         
         if (!response.ok) {
-            throw new Error(`GitHub API error: ${response.status}`);
+            throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
         }
         
-        const data = await response.json();
+        const { data, errors } = await response.json();
         
-        if (data.errors) {
-            console.warn('⚠️ GitHub API errors:', data.errors);
+        if (errors?.[0]) {
+            console.warn('⚠️ GitHub API errors:', errors);
             return null;
         }
         
-        // Convert GitHub data to our format
-        const contributionData = [];
-        const weeks = data.data.user.contributionsCollection.contributionCalendar.weeks;
+        // Convert to Platane/snk format using EXACT same logic
+        const contributionData = data.user.contributionsCollection.contributionCalendar.weeks.flatMap(
+            ({ contributionDays }, x) =>
+                contributionDays.map((d) => ({
+                    x,
+                    y: d.weekday,
+                    date: d.date,
+                    count: d.contributionCount,
+                    level:
+                        (d.contributionLevel === "FOURTH_QUARTILE" && 4) ||
+                        (d.contributionLevel === "THIRD_QUARTILE" && 3) ||
+                        (d.contributionLevel === "SECOND_QUARTILE" && 2) ||
+                        (d.contributionLevel === "FIRST_QUARTILE" && 1) ||
+                        0,
+                    // Add compatibility fields for our zombie generator
+                    week: x,
+                    day: d.weekday
+                }))
+        );
         
-        weeks.forEach((week, weekIndex) => {
-            week.contributionDays.forEach((day, dayIndex) => {
-                const level = Math.min(4, Math.max(0, 
-                    day.contributionCount === 0 ? 0 :
-                    day.contributionCount <= 3 ? 1 :
-                    day.contributionCount <= 7 ? 2 :
-                    day.contributionCount <= 12 ? 3 : 4
-                ));
-                
-                contributionData.push({
-                    week: weekIndex,
-                    day: dayIndex,
-                    level: level,
-                    count: day.contributionCount,
-                    date: day.date
-                });
-            });
-        });
+        console.log(`✅ Fetched ${contributionData.length} contribution cells using Platane/snk format`);
+        console.log(`📅 Date range: ${contributionData[0]?.date} to ${contributionData[contributionData.length - 1]?.date}`);
         
-        console.log(`✅ Fetched ${contributionData.length} real contribution data points`);
         return contributionData;
         
     } catch (error) {
-        console.warn('⚠️ Failed to fetch GitHub contributions:', error.message);
+        if (error.message.includes('401')) {
+            console.warn('🔑 GitHub API authentication failed. To get your real contributions:');
+            console.warn('   1. Create a GitHub Personal Access Token at: https://github.com/settings/tokens');
+            console.warn('   2. Add it to .env file: GITHUB_TOKEN=ghp_your_token_here');
+            console.warn('   3. See GITHUB_TOKEN_SETUP.md for detailed instructions');
+        } else {
+            console.warn('⚠️ Failed to fetch GitHub contributions:', error.message);
+        }
+        console.log('🔄 Will fall back to sample data...');
         return null;
     }
 }
@@ -417,14 +453,25 @@ async function generateZombieAnimation() {
                 console.log(`📊 Loaded ${contributionData.length} contribution data points from data.json`);
             } else {
                 console.log('⚠️ No GitHub token and no data.json found, generating sample data...');
-                // Generate sample data
+                // Generate sample data using Platane/snk format
                 contributionData = [];
-                for (let week = 0; week < GRID_WIDTH; week++) {
-                    for (let day = 0; day < GRID_HEIGHT; day++) {
+                for (let x = 0; x < GRID_WIDTH; x++) {
+                    for (let y = 0; y < GRID_HEIGHT; y++) {
                         const level = Math.random() > 0.7 ? Math.floor(Math.random() * 4) + 1 : 0;
-                        contributionData.push({ week, day, level, count: level * 2 });
+                        const count = level === 0 ? 0 : Math.floor(Math.random() * 10) + level;
+                        contributionData.push({ 
+                            x, 
+                            y, 
+                            level, 
+                            count,
+                            date: new Date(Date.now() - (GRID_WIDTH - x) * 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+                            // Add compatibility fields
+                            week: x,
+                            day: y
+                        });
                     }
                 }
+                console.log('📊 Generated sample contribution data with Platane/snk format');
             }
         }
         
