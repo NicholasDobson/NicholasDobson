@@ -95,7 +95,7 @@
   
   <!-- Animated Zombie Contributions -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-github.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/dist/zombie-github.svg">
   </picture>
   
   <details>
