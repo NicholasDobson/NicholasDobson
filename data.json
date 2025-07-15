@@ -3125,7 +3125,7 @@
   {
     "week": 49,
     "day": 4,
-    "level": 4,
+    "level": 3,
     "id": "49-4",
     "date": "2025-06-26",
     "count": 25,
@@ -3299,7 +3299,7 @@
     "level": 4,
     "id": "52-2",
     "date": "2025-07-15",
-    "count": 32,
+    "count": 34,
     "infected": false
   }
 ]
