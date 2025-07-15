@@ -89,15 +89,26 @@
 </div>
 
 
-<!-- 🧟‍♂️ Zombie Hacker Contributions Infiltration -->
+<!-- 🧟‍♂️ Zombie Hacker -->
 <div align="center">
-  <h2>🧟‍♂️ ZOMBIE HACKER INFILTRATING GITHUB MATRIX 🧟‍♂️</h2>
+  <h2>🧟‍♂️ ZOMBIE HACKER INFILTRATING MY CONTRIBUTIONS 🧟‍♂️</h2>
   
-  <!-- Embedded Zombie Hacker Visualization -->
-  <a href="https://nicholasdobson.github.io/NicholasDobson/">
-    <img width="800" src="https://via.placeholder.com/800x300/0a0a0a/00ff00?text=🧟‍♂️+CLICK+TO+WATCH+ZOMBIE+HACK+MY+CONTRIBUTIONS+🧟‍♂️" alt="Zombie Hacker Infiltrating GitHub Contributions Matrix">
-  </a>
+  <!-- Animated Zombie Hacker -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-hacker-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-hacker-light.svg">
+    <img alt="🧟‍♂️ Zombie Hacker infiltrating my contributions" src="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-hacker.svg">
+  </picture>
   
-  <p><em>🔥 Interactive zombie hacker visualization of my GitHub contributions!</em></p>
-  <p><strong><a href="https://nicholasdobson.github.io/NicholasDobson/">🚀 Click here to watch the full zombie apocalypse simulation!</a></strong></p>
+  <details>
+  <summary>🧟‍♂️ About the Zombie Hacker</summary>
+  <br>
+  
+  - **Custom Animation**: 100% original zombie hacker infiltration concept
+  - **Real GitHub Data**: Uses your actual contribution history  
+  - **Matrix Effects**: Scan lines, matrix rain, and hacking sequences
+  - **Interactive**: Click to view full zombie hacker experience
+  - **Auto-Generated**: Updates every 12 hours via GitHub Actions
+  
+  </details>
 </div>
