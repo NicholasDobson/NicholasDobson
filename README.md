@@ -35,11 +35,27 @@
 
 <hr/>
 
-<h2 align="center"> Languages-Frameworks-Tools</h2>
+<h2 align="center">🛠️ Languages · Frameworks · Tools</h2>
 <br/>
+
+<h3 align="center">💻 Frontend</h3>
 <div align="center">
-  <a href="">
-    <img src="" /><br>
-    <img src="" />
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,js,ts,angular,react" />
   </a>
 </div>
+
+<h3 align="center">⚙️ DevOps & Tools</h3>
+<div align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=git,docker,kubernetes,vim,linux,bash" />
+  </a>
+</div>
+
+<h3 align="center">🧠 Backend</h3>
+<div align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=python,fastapi,nodejs,postgres,mysql,c" />
+  </a>
+</div>
+
