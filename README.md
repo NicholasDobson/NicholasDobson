@@ -35,52 +35,52 @@
 
 <hr/>
 
-<h2 align="center">🛠️ Languages · Frameworks · Tools 🛠️</h2>
+<h2 align="center">🛠️ Languages · Frameworks · Tools </h2>
 <br/>
 
-<h3 align="center">💻 Frontend 💻</h3>
+<h3 align="center">💻 Frontend</h3>
 <div align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=html,css,js,ts,angular,react,php,figma,bootstrap,cypress,jest,express" />
   </a>
 </div>
 
-<h3 align="center">⚙️ DevOps & Tools ⚙️</h3>
+<h3 align="center">⚙️ DevOps & Tools </h3>
 <div align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=git,githubactions,docker,vim,linux,bash,aws,postman,powershell,regex,npm,vscode,windows,ubuntu,nextjs" />
   </a>
 </div>
 
-<h3 align="center">🧠 Backend 🧠</h3>
+<h3 align="center">🧠 Backend</h3>
 <div align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=java,python,fastapi,nodejs,c,cpp,rust" />
   </a>
 </div>
 
-<h3 align="center">🔬 AI / Machine Learning 🔬</h3>
+<h3 align="center">🔬 AI / Machine Learning</h3>
 <div align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=pytorch" />
   </a>
 </div>
 
-<h3 align="center">🛢️ Databases 🛢️</h3>
+<h3 align="center">🛢️ Databases</h3>
 <div align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb" />
   </a>
 </div>
 
-<h3 align="center">🔧 Hardware & Embedded 🔧</h3>
+<h3 align="center">🔧 Hardware & Embedded</h3>
 <div align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=arduino,raspberrypi,kali" />
   </a>
 </div>
 
-<h3 align="center">📊 Data Science 📊</h3>
+<h3 align="center">📊 Data Science</h3>
 <div align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=r" />
