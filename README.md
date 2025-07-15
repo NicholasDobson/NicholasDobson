@@ -41,21 +41,50 @@
 <h3 align="center">💻 Frontend</h3>
 <div align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,ts,angular,react" />
+    <img src="https://skillicons.dev/icons?i=html,css,js,ts,angular,react,php,figma,bootstrap,cypress,jest,express" />
   </a>
 </div>
 
 <h3 align="center">⚙️ DevOps & Tools</h3>
 <div align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=git,docker,kubernetes,vim,linux,bash" />
+    <img src="https://skillicons.dev/icons?i=git,githubactions,docker,vim,linux,bash,aws,postman,powershell,regex,npm,vscode,windows,ubuntu,nextjs" />
   </a>
 </div>
 
 <h3 align="center">🧠 Backend</h3>
 <div align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=python,fastapi,nodejs,postgres,mysql,c" />
+    <img src="https://skillicons.dev/icons?i=java,python,fastapi,nodejs,c,cpp,rust" />
   </a>
+</div>
+
+<h3 align="center">🔬 AI / Machine Learning</h3>
+<div align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=pytorch" />
+  </a>
+</div>
+
+<h3 align="center">🛢️ Databases</h3>
+<div align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb" />
+  </a>
+</div>
+
+<h3 align="center">🔧 Hardware & Embedded</h3>
+<div align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=arduino,raspberrypi,kali" />
+  </a>
+</div>
+
+<h3 align="center">📊 Data Science</h3>
+<div align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=r" />
+  </a>
+  <!-- SAS doesn't exist on skillicons.dev, so you can leave it out or mention it in text -->
 </div>
 
