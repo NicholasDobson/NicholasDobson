@@ -18,5 +18,9 @@
 
 </div>
 
-
+<div align="center">
+  <a href="https://www.linkedin.com/in/nicholas-dobson-a64a84355">
+      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+</div>
 
