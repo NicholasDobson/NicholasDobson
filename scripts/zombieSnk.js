@@ -5,6 +5,12 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Polyfill fetch for Node.js if not available
+if (!globalThis.fetch) {
+    const { default: fetch } = await import('node-fetch');
+    globalThis.fetch = fetch;
+}
+
 // Configuration - using same values as Platane/snk for consistency
 const GRID_WIDTH = 53;
 const GRID_HEIGHT = 7;
@@ -264,39 +270,39 @@ function generateLivingCellAnimations(livingCells) {
     livingCells.forEach((cell) => {
         if (cell.t !== null) {
             const startTime = (cell.t * 100).toFixed(2);
-            const endTime = Math.min(100, cell.t * 100 + 5).toFixed(2);
+            const endTime = Math.min(100, cell.t * 100 + 3).toFixed(2); // Shorter duration
             
-            // Cell color change animation - turns red when zombie visits
+            // Cell color change animation - turns red EXACTLY when zombie visits
             animations += `
       .c${cellIndex} {
         animation: infected${cellIndex} ${ANIMATION_DURATION}ms linear infinite;
       }
       @keyframes infected${cellIndex} {
         0%, ${startTime}% { fill: var(--c${cell.level}); }
-        ${startTime}%, 100% { fill: var(--infected); }
+        ${(parseFloat(startTime) + 0.1).toFixed(2)}%, 100% { fill: var(--infected); }
       }`;
       
-            // Infection circle animation
+            // Infection circle animation - appears exactly when zombie is on the cell
             animations += `
       .inf${cellIndex} {
         animation: infection${cellIndex} ${ANIMATION_DURATION}ms linear infinite;
       }
       @keyframes infection${cellIndex} {
         0%, ${startTime}% { opacity: 0; transform: scale(0); }
-        ${startTime}% { opacity: 0.9; transform: scale(1.5); }
-        ${(cell.t * 100 + 2).toFixed(2)}% { opacity: 0.6; transform: scale(2.5); }
-        ${endTime}% { opacity: 0; transform: scale(0); }
+        ${(parseFloat(startTime) + 0.1).toFixed(2)}% { opacity: 0.9; transform: scale(1.5); }
+        ${(parseFloat(startTime) + 1).toFixed(2)}% { opacity: 0.6; transform: scale(2.5); }
+        ${(parseFloat(startTime) + 2).toFixed(2)}% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }`;
       
-            // Skull animation - appears after infection
+            // Skull animation - appears after infection with delay
             animations += `
       .skull${cellIndex} {
         animation: skull${cellIndex} ${ANIMATION_DURATION}ms linear infinite;
       }
       @keyframes skull${cellIndex} {
-        0%, ${endTime}% { opacity: 0; transform: scale(0); }
-        ${endTime}%, 100% { opacity: 1; transform: scale(1); }
+        0%, ${(parseFloat(startTime) + 1.5).toFixed(2)}% { opacity: 0; transform: scale(0); }
+        ${(parseFloat(startTime) + 2).toFixed(2)}%, 100% { opacity: 1; transform: scale(1); }
       }`;
       
             cellIndex++;
@@ -317,26 +323,107 @@ function generateZombieKeyframes(path) {
     }).join(' ');
 }
 
+// Fetch actual GitHub contributions
+async function fetchGitHubContributions(username = 'NicholasDobson') {
+    try {
+        console.log(`📊 Fetching real GitHub contributions for ${username}...`);
+        
+        // GitHub GraphQL API query to get contribution data
+        const query = `
+        query($username: String!) {
+          user(login: $username) {
+            contributionsCollection {
+              contributionCalendar {
+                weeks {
+                  contributionDays {
+                    contributionCount
+                    date
+                  }
+                }
+              }
+            }
+          }
+        }`;
+        
+        const response = await fetch('https://api.github.com/graphql', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${process.env.GITHUB_TOKEN || 'ghp_fake_token'}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                query,
+                variables: { username }
+            })
+        });
+        
+        if (!response.ok) {
+            throw new Error(`GitHub API error: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        
+        if (data.errors) {
+            console.warn('⚠️ GitHub API errors:', data.errors);
+            return null;
+        }
+        
+        // Convert GitHub data to our format
+        const contributionData = [];
+        const weeks = data.data.user.contributionsCollection.contributionCalendar.weeks;
+        
+        weeks.forEach((week, weekIndex) => {
+            week.contributionDays.forEach((day, dayIndex) => {
+                const level = Math.min(4, Math.max(0, 
+                    day.contributionCount === 0 ? 0 :
+                    day.contributionCount <= 3 ? 1 :
+                    day.contributionCount <= 7 ? 2 :
+                    day.contributionCount <= 12 ? 3 : 4
+                ));
+                
+                contributionData.push({
+                    week: weekIndex,
+                    day: dayIndex,
+                    level: level,
+                    count: day.contributionCount,
+                    date: day.date
+                });
+            });
+        });
+        
+        console.log(`✅ Fetched ${contributionData.length} real contribution data points`);
+        return contributionData;
+        
+    } catch (error) {
+        console.warn('⚠️ Failed to fetch GitHub contributions:', error.message);
+        return null;
+    }
+}
+
 // Load data and generate zombie SVG
 async function generateZombieAnimation() {
     try {
         console.log('🧟‍♂️ Generating zombie GitHub animation using Platane/snk principles...');
         
-        // Load contribution data
-        const dataPath = path.join(__dirname, '..', 'public', 'data.json');
-        let contributionData = [];
+        // Try to fetch real GitHub contributions first
+        let contributionData = await fetchGitHubContributions();
         
-        if (fs.existsSync(dataPath)) {
-            const rawData = fs.readFileSync(dataPath, 'utf8');
-            contributionData = JSON.parse(rawData);
-            console.log(`📊 Loaded ${contributionData.length} contribution data points`);
-        } else {
-            console.log('⚠️ No data.json found, generating sample data...');
-            // Generate sample data
-            for (let week = 0; week < GRID_WIDTH; week++) {
-                for (let day = 0; day < GRID_HEIGHT; day++) {
-                    const level = Math.random() > 0.7 ? Math.floor(Math.random() * 4) + 1 : 0;
-                    contributionData.push({ week, day, level, count: level * 2 });
+        if (!contributionData) {
+            // Fallback: Load from data.json
+            const dataPath = path.join(__dirname, '..', 'public', 'data.json');
+            if (fs.existsSync(dataPath)) {
+                const rawData = fs.readFileSync(dataPath, 'utf8');
+                contributionData = JSON.parse(rawData);
+                console.log(`📊 Loaded ${contributionData.length} contribution data points from data.json`);
+            } else {
+                console.log('⚠️ No GitHub token and no data.json found, generating sample data...');
+                // Generate sample data
+                contributionData = [];
+                for (let week = 0; week < GRID_WIDTH; week++) {
+                    for (let day = 0; day < GRID_HEIGHT; day++) {
+                        const level = Math.random() > 0.7 ? Math.floor(Math.random() * 4) + 1 : 0;
+                        contributionData.push({ week, day, level, count: level * 2 });
+                    }
                 }
             }
         }

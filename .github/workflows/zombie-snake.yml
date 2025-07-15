@@ -29,6 +29,9 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Install dependencies 📦
+        run: npm install
+
       - name: Generate zombie GitHub animation 🧟‍♂️
         run: |
           echo "🧟‍♂️ Generating zombie GitHub contribution animation..."
