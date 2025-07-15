@@ -14,8 +14,11 @@
 
 
 <div align="center">
-🔭 I’m currently working on **a chat bot, aimbot**
-🌱 I’m currently learning **AWS services**
-💬 Ask me about **Anything**
+
+🔭 I’m currently working on **a chat bot** and **an aimbot**  
+🌱 I’m currently learning **AWS services**  
+💬 Ask me about **anything**  
 ⚡ Fun fact: **Some studies suggest left-handed programmers may have an edge in abstract problem-solving, which can help with debugging, systems design, or algorithms — especially in creative, non-linear environments like game development or AI.**
+
 </div>
+
