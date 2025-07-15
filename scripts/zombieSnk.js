@@ -3,10 +3,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename)    // Add zombie character - start at origin since transform will position it
-    svg += `
-    <!-- Zombie -->
-    <text class="zombie" x="0" y="0">🧟‍♂️</text>`; 
+const __dirname = path.dirname(__filename);
+
 function loadEnvFile() {
     const envPath = path.join(__dirname, '..', '.env');
     if (fs.existsSync(envPath)) {
@@ -181,13 +179,10 @@ async function createZombieContributionSVG(contributionData, theme = ZOMBIE_THEM
         }
     });
     
-    // Add zombie character
-    const startX = zombiePath[0] ? zombiePath[0].x * CELL_SIZE + CELL_SIZE / 2 : CELL_SIZE / 2;
-    const startY = zombiePath[0] ? zombiePath[0].y * CELL_SIZE + CELL_SIZE / 2 : CELL_SIZE / 2;
-    
+    // Add zombie character - start at origin since transform will position it
     svg += `
     <!-- Zombie -->
-    <text class="zombie" x="${startX}" y="${startY}">🧟‍♂️</text>
+    <text class="zombie" x="0" y="0">🧟‍♂️</text>
   </g>
   
   <!-- Title -->
@@ -354,6 +349,16 @@ function generateZombieKeyframes(path) {
 // Fetch GitHub contributions using EXACT same approach as Platane/snk
 async function fetchGitHubContributions(username = 'NicholasDobson') {
     try {
+        // Get GitHub token from environment variables (for GitHub Actions) or .env file (for local)
+        const token = process.env.GITHUB_TOKEN || process.env.TOKEN;
+        
+        if (!token) {
+            console.warn('🔑 No GitHub token found in environment variables');
+            console.warn('   For GitHub Actions: TOKEN secret should be set');
+            console.warn('   For local development: Add GITHUB_TOKEN=your_token to .env file');
+            return null;
+        }
+        
         console.log(`📊 Fetching real GitHub contributions for ${username} (using Platane/snk method)...`);
         
         // Use EXACT same GraphQL query as Platane/snk packages/github-user-contribution/index.ts
