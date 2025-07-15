@@ -1,4 +1,4 @@
-name: Generate Zombie Hacker Animation
+name: Generate Zombie GitHub Animation
 
 on:
   # run automatically every 12 hours
@@ -29,18 +29,10 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Fetch GitHub contributions data 🧟‍♂️
-        env:
-          GITHUB_USERNAME: ${{ github.repository_owner }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate zombie GitHub animation 🧟‍♂️
         run: |
-          echo "🧟‍♂️ Fetching contribution data for zombie infiltration..."
-          node scripts/fetchContributions.js
-
-      - name: Generate zombie hacker animation 🎨
-        run: |
-          echo "🎨 Generating custom zombie hacker SVG animation..."
-          node scripts/generateZombieHacker.js
+          echo "🧟‍♂️ Generating zombie GitHub contribution animation..."
+          node scripts/zombieSnk.js
       
       - name: Push zombie animation to output branch 🚀
         uses: crazy-max/ghaction-github-pages@v3.1.0
