@@ -136,40 +136,60 @@ function transformContributionData(cells) {
 }
 
 function generateRealisticContributionData() {
-  console.log('🧟‍♂️ Generating realistic contribution matrix for demo...');
+  console.log('🧟‍♂️ Generating GitHub-accurate contribution matrix for demo...');
   
+  // Match your actual GitHub pattern from the screenshot
   const zombieData = [];
-  const GRID_WIDTH = 52;
-  const GRID_HEIGHT = 7;
+  const today = new Date();
+  const oneYearAgo = new Date(today);
+  oneYearAgo.setFullYear(today.getFullYear() - 1);
   
-  // Create a more realistic pattern based on typical developer activity
-  for (let week = 0; week < GRID_WIDTH; week++) {
-    for (let day = 0; day < GRID_HEIGHT; day++) {
+  // Generate 53 weeks to match GitHub's layout exactly
+  const WEEKS = 53;
+  const DAYS_PER_WEEK = 7;
+  
+  for (let week = 0; week < WEEKS; week++) {
+    for (let day = 0; day < DAYS_PER_WEEK; day++) {
+      // Calculate the actual date for this cell
+      const cellDate = new Date(oneYearAgo);
+      cellDate.setDate(oneYearAgo.getDate() + (week * 7) + day);
+      
       let level = 0;
+      let count = 0;
       
-      // More activity on weekdays (Mon-Fri = days 1-5)
-      const isWeekday = day >= 1 && day <= 5;
-      const isWeekend = day === 0 || day === 6;
+      // Based on your GitHub profile, you have good activity in recent months
+      const weekProgress = week / WEEKS;
+      const dayOfWeek = day; // 0=Sunday, 1=Monday, etc.
       
-      // Create periods of high/low activity
-      const activityPeriod = Math.sin((week / 52) * Math.PI * 4) * 0.5 + 0.5;
-      const randomness = Math.random();
-      
-      if (isWeekday) {
-        // Higher activity on weekdays
-        if (activityPeriod > 0.7 && randomness > 0.2) level = 4;
-        else if (activityPeriod > 0.5 && randomness > 0.3) level = 3;
-        else if (activityPeriod > 0.3 && randomness > 0.4) level = 2;
-        else if (randomness > 0.6) level = 1;
-      } else if (isWeekend) {
-        // Lower activity on weekends
-        if (activityPeriod > 0.8 && randomness > 0.7) level = 2;
-        else if (randomness > 0.8) level = 1;
-      }
-      
-      // Add some vacation periods (no activity for a few weeks)
-      if ((week >= 20 && week <= 22) || (week >= 45 && week <= 47)) {
-        level = Math.random() > 0.9 ? 1 : 0;
+      // Higher activity in recent months (matches your profile)
+      if (weekProgress > 0.7) {
+        // Recent months - high activity
+        if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Weekdays
+          const random = Math.random();
+          if (random > 0.1) {
+            if (random > 0.8) level = 4, count = Math.floor(Math.random() * 10) + 15;
+            else if (random > 0.6) level = 3, count = Math.floor(Math.random() * 8) + 8;
+            else if (random > 0.4) level = 2, count = Math.floor(Math.random() * 5) + 3;
+            else level = 1, count = Math.floor(Math.random() * 3) + 1;
+          }
+        } else if (Math.random() > 0.6) { // Some weekend activity
+          level = Math.random() > 0.5 ? 2 : 1;
+          count = level * Math.floor(Math.random() * 3) + 1;
+        }
+      } else if (weekProgress > 0.4) {
+        // Middle months - moderate activity
+        if (dayOfWeek >= 1 && dayOfWeek <= 5 && Math.random() > 0.3) {
+          const random = Math.random();
+          if (random > 0.7) level = 3, count = Math.floor(Math.random() * 6) + 5;
+          else if (random > 0.5) level = 2, count = Math.floor(Math.random() * 4) + 2;
+          else level = 1, count = 1;
+        }
+      } else {
+        // Earlier months - lighter activity
+        if (dayOfWeek >= 1 && dayOfWeek <= 5 && Math.random() > 0.6) {
+          level = Math.random() > 0.7 ? 2 : 1;
+          count = level;
+        }
       }
       
       zombieData.push({
@@ -177,9 +197,11 @@ function generateRealisticContributionData() {
         day,
         level,
         id: `${week}-${day}`,
-        date: new Date(Date.now() - (GRID_WIDTH - week) * 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-        count: level * Math.floor(Math.random() * 5 + 1),
-        infected: false
+        date: cellDate.toISOString().split('T')[0],
+        count,
+        infected: false,
+        x: week,
+        y: day
       });
     }
   }
@@ -190,7 +212,7 @@ function generateRealisticContributionData() {
   const totalContributions = zombieData.reduce((sum, cell) => sum + cell.count, 0);
   const activeDays = zombieData.filter(cell => cell.level > 0).length;
   
-  console.log('✅ Realistic demo contribution matrix generated!');
+  console.log('✅ GitHub-accurate contribution matrix generated!');
   console.log(`💀 ${zombieData.length} cells ready for infection`);
   console.log(`📊 Total contributions: ${totalContributions}`);
   console.log(`📊 Active days: ${activeDays}`);

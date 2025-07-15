@@ -198,7 +198,7 @@ async function generateZombieHackerSVG(contributionData, theme = 'dark') {
     });
     
     // Zombie hacker character with improved path
-    const zombiePath = generateZombiePath(hackSequence);
+    const zombiePath = generateZombiePath(hackSequence, padding);
     svg += `
     <g class="zombie">
       <text font-size="16" text-anchor="middle" filter="url(#glow)">
@@ -209,16 +209,17 @@ async function generateZombieHackerSVG(contributionData, theme = 'dark') {
       </text>
     </g>`;
     
-    // Add infection trail - shows zombie's path
+    // Add infection trail - shows zombie's path with correct positioning
     hackSequence.forEach((cell, index) => {
-        const x = cell.week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
-        const y = cell.day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+        // Match the contribution grid positioning exactly
+        const x = padding + (cell.week * (CELL_SIZE + CELL_GAP)) + CELL_SIZE/2;
+        const y = 60 + (cell.day * (CELL_SIZE + CELL_GAP)) + CELL_SIZE/2;
         const delay = (index / hackSequence.length) * ANIMATION_DURATION;
         
         svg += `
-    <circle cx="${x}" cy="${y}" r="2" fill="${colors.zombie}" opacity="0">
-      <animate attributeName="opacity" values="0;0.8;0" dur="1s" begin="${delay}s"/>
-      <animate attributeName="r" values="2;8;2" dur="1s" begin="${delay}s"/>
+    <circle cx="${x}" cy="${y}" r="2" fill="${colors.infected}" opacity="0">
+      <animate attributeName="opacity" values="0;1;0.3;0" dur="2s" begin="${delay}s"/>
+      <animate attributeName="r" values="2;6;8;0" dur="2s" begin="${delay}s"/>
     </circle>`;
     });
     
@@ -259,89 +260,85 @@ async function generateZombieHackerSVG(contributionData, theme = 'dark') {
 }
 
 function generateHackSequence(contributionData) {
-    // Create a more strategic hacking sequence that looks like actual movement
-    const validCells = contributionData.filter(cell => cell.level > 0);
+    // Create a simple snake-like path through active contributions
+    const activeCells = contributionData.filter(cell => cell.level > 0);
     
-    if (validCells.length === 0) {
-        // Fallback: create some interesting cells to hack in a logical path
-        return contributionData.slice(0, 30).filter((cell, index) => index % 3 === 0);
+    if (activeCells.length === 0) {
+        // If no active cells, create a simple snake pattern
+        const sequence = [];
+        for (let week = 0; week < GRID_WIDTH; week++) {
+            // Create a snake pattern: alternate between top and bottom
+            const day = week % 4 < 2 ? 1 : GRID_HEIGHT - 2;
+            sequence.push({
+                week,
+                day,
+                level: 1,
+                id: `${week}-${day}`,
+                count: 1
+            });
+        }
+        return sequence;
     }
     
-    // Start with highest value cells but arrange them in a more logical movement pattern
-    validCells.sort((a, b) => {
-        // Primary sort: by contribution level (higher first)
-        if (a.level !== b.level) return b.level - a.level;
-        // Secondary sort: by week (left to right progression)
+    // Sort active cells by week first to create left-to-right flow
+    activeCells.sort((a, b) => {
         if (a.week !== b.week) return a.week - b.week;
-        // Tertiary sort: by day
         return a.day - b.day;
     });
     
-    // Take high-value targets but limit to create smooth movement
-    const maxCells = Math.min(validCells.length, 25);
-    let sequence = validCells.slice(0, maxCells);
-    
-    // Re-sort the sequence to create a logical left-to-right, top-to-bottom movement pattern
-    sequence.sort((a, b) => {
-        // Group by approximate week ranges for smoother movement
-        const aWeekGroup = Math.floor(a.week / 4);
-        const bWeekGroup = Math.floor(b.week / 4);
-        
-        if (aWeekGroup !== bWeekGroup) return aWeekGroup - bWeekGroup;
-        
-        // Within the same week group, alternate direction based on week
-        if (aWeekGroup % 2 === 0) {
-            // Even groups: top to bottom
-            if (a.day !== b.day) return a.day - b.day;
-            return a.week - b.week;
-        } else {
-            // Odd groups: bottom to top (creates snake-like movement)
-            if (a.day !== b.day) return b.day - a.day;
-            return a.week - b.week;
-        }
-    });
-    
-    return sequence;
-}
-
-function generateZombiePath(hackSequence) {
-    if (hackSequence.length === 0) return "M 0 0";
-    
-    // Start from off-screen left and move to the first cell
-    const startX = -20;
-    const startY = hackSequence[0].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
-    const firstX = hackSequence[0].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
-    const firstY = hackSequence[0].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
-    
-    let path = `M ${startX} ${startY} L ${firstX} ${firstY}`;
-    
-    // Create a path through all the hack sequence points
-    for (let i = 1; i < hackSequence.length; i++) {
-        const x = hackSequence[i].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
-        const y = hackSequence[i].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
-        
-        // Add some curve for more interesting movement
-        const prevX = hackSequence[i-1].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
-        const prevY = hackSequence[i-1].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
-        
-        // Use smooth curves between distant points, straight lines for adjacent ones
-        const distance = Math.abs(x - prevX) + Math.abs(y - prevY);
-        
-        if (distance > (CELL_SIZE + CELL_GAP) * 2) {
-            // Add a curve for longer distances
-            const controlX = (prevX + x) / 2;
-            const controlY = (prevY + y) / 2 + (Math.random() - 0.5) * 15;
-            path += ` Q ${controlX} ${controlY} ${x} ${y}`;
-        } else {
-            // Straight line for adjacent cells
-            path += ` L ${x} ${y}`;
-        }
+    // For smooth movement, we don't want too many jumps
+    // So let's take every 2nd or 3rd cell to create a flowing path
+    const smoothSequence = [];
+    for (let i = 0; i < activeCells.length; i += 2) {
+        smoothSequence.push(activeCells[i]);
     }
     
-    // End by moving off-screen right
-    const lastX = hackSequence[hackSequence.length - 1].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
-    const lastY = hackSequence[hackSequence.length - 1].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
-    const endX = (GRID_WIDTH * (CELL_SIZE + CELL_GAP)) + 20;
+    return smoothSequence;
+}
+
+function generateZombiePath(hackSequence, padding = 40) {
+    if (hackSequence.length === 0) {
+        // Simple straight path if no data (accounting for grid offset)
+        const midY = 60 + Math.floor(GRID_HEIGHT / 2) * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+        return `M -30 ${midY} L ${(GRID_WIDTH * (CELL_SIZE + CELL_GAP)) + 30} ${midY}`;
+    }
+    
+    // Create smooth snake-like path with correct positioning
+    let path = '';
+    
+    // Start off-screen left (accounting for grid offset)
+    const startX = -30;
+    const startY = 60 + hackSequence[0].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+    path = `M ${startX} ${startY}`;
+    
+    // Move to first contribution cell (accounting for grid offset)
+    const firstX = padding + hackSequence[0].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+    const firstY = 60 + hackSequence[0].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+    path += ` L ${firstX} ${firstY}`;
+    
+    // Create smooth curves between all points
+    for (let i = 1; i < hackSequence.length; i++) {
+        const currX = padding + hackSequence[i].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+        const currY = 60 + hackSequence[i].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+        const prevX = padding + hackSequence[i-1].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+        const prevY = 60 + hackSequence[i-1].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+        
+        // Calculate smooth curve control points
+        const midX = (prevX + currX) / 2;
+        const midY = (prevY + currY) / 2;
+        
+        // Add slight curve variation for organic movement
+        const curveVariation = 5;
+        const controlY = midY + (Math.sin(i * 0.5) * curveVariation);
+        
+        // Use quadratic curve for smooth snake-like movement
+        path += ` Q ${midX} ${controlY} ${currX} ${currY}`;
+    }
+    
+    // End off-screen right (accounting for grid offset)
+    const lastX = padding + hackSequence[hackSequence.length - 1].week * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+    const lastY = 60 + hackSequence[hackSequence.length - 1].day * (CELL_SIZE + CELL_GAP) + CELL_SIZE/2;
+    const endX = (GRID_WIDTH * (CELL_SIZE + CELL_GAP)) + 30;
     path += ` L ${endX} ${lastY}`;
     
     return path;
