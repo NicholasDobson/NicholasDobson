@@ -33,8 +33,11 @@ jobs:
         run: npm install
 
       - name: Generate zombie GitHub animation 🧟‍♂️
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: |
           echo "🧟‍♂️ Generating zombie GitHub contribution animation..."
+          echo "Using custom token for real contribution data..."
           node scripts/zombieSnk.js
       
       - name: Push zombie animation to output branch 🚀
