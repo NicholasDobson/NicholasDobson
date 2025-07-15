@@ -3,9 +3,10 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Load environment variables from .env file if it exists
+const __dirname = path.dirname(__filename)    // Add zombie character - start at origin since transform will position it
+    svg += `
+    <!-- Zombie -->
+    <text class="zombie" x="0" y="0">🧟‍♂️</text>`; 
 function loadEnvFile() {
     const envPath = path.join(__dirname, '..', '.env');
     if (fs.existsSync(envPath)) {
@@ -343,8 +344,9 @@ function generateZombieKeyframes(path) {
     
     return path.map((point, index) => {
         const t = (index / (path.length - 1)) * 100;
-        const x = point.x * CELL_SIZE;
-        const y = point.y * CELL_SIZE;
+        // Center the zombie on the cell by adding half the cell size
+        const x = point.x * CELL_SIZE + CELL_SIZE / 2;
+        const y = point.y * CELL_SIZE + CELL_SIZE / 2;
         return `${t.toFixed(2)}% { transform: translate(${x}px, ${y}px); }`;
     }).join(' ');
 }
