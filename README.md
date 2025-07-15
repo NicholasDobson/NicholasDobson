@@ -119,7 +119,5 @@
 <br>
 <div align="center">
   <img width=390 src="https://github-readme-stats.vercel.app/api?username=NicholasDobson&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10" alt="stats"/>
-<img width=325 src="https://your-vercel-app.vercel.app/api/top-langs/?username=NicholasDobson&layout=compact&count_private=true" alt="stats"/>
-
 </div>
 
