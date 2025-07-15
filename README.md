@@ -95,9 +95,9 @@
   
   <!-- Animated Zombie Contributions -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-github.svg?v=4">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-github.svg?v=4">
-    <img alt="🧟‍♂️ Zombie infiltrating my GitHub contributions" src="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-github.svg?v=4">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg">
+    <img alt="🧟‍♂️ Zombie infiltrating my GitHub contributions" src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg">
   </picture>
   
   <details>
