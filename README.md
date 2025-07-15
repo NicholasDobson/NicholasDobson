@@ -6,19 +6,17 @@
 
 <h3 align="center">A passionate software developer from South Africa <img src="https://flagcdn.com/w40/za.png" width="20"/></h3>
 
-
-
-
-
-
-
-
 <div align="center">
 
-🔭 I’m currently working on **a chat bot** and **an aimbot**  
+🔭 I’m currently working on **a chat bot** and **an online game aimbot** 
+
 🌱 I’m currently learning **AWS services**  
+
 💬 Ask me about **anything**  
+
 ⚡ Fun fact: **Some studies suggest left-handed programmers may have an edge in abstract problem-solving, which can help with debugging, systems design, or algorithms — especially in creative, non-linear environments like game development or AI.**
 
 </div>
+
+
 
