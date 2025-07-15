@@ -4,7 +4,7 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Righteous&size=35&duration=4000&pause=800&center=true&vCenter=true&random=true&width=435&height=55&lines=Hi+There!+%F0%9F%91%8B;I'm+Nicholas+Dobson!" alt="Typing SVG" /></a>
 </h1>
 
-**NicholasDobson/NicholasDobson** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<h3 align="center">A passionate software developer from South Africa <img src="https://flagcdn.com/w40/za.png" width="20"/></h3>
 
 Here are some ideas to get you started:
 
