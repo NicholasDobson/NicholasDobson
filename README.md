@@ -1,4 +1,4 @@
-<img allign="right" src="https://visitor-badge.laobi.icu/badge?page_id=NicholasDobson.visitor-badge" />
+<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=NicholasDobson.visitor-badge" />
 ## Hi there 👋
 
 <!--
