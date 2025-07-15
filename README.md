@@ -89,26 +89,26 @@
 </div>
 
 
-<!-- 🧟‍♂️ Zombie Hacker -->
+<!-- 🧟‍♂️ Zombie GitHub Infiltration -->
 <div align="center">
-  <h2>🧟‍♂️ ZOMBIE HACKER INFILTRATING MY CONTRIBUTIONS 🧟‍♂️</h2>
+  <h2>🧟‍♂️ ZOMBIE INFILTRATING MY GITHUB CONTRIBUTIONS 🧟‍♂️</h2>
   
-  <!-- Animated Zombie Hacker -->
+  <!-- Animated Zombie Contributions -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-hacker-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-hacker-light.svg">
-    <img alt="🧟‍♂️ Zombie Hacker infiltrating my contributions" src="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-hacker.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-github.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-github.svg">
+    <img alt="🧟‍♂️ Zombie infiltrating my GitHub contributions" src="https://raw.githubusercontent.com/NicholasDobson/NicholasDobson/output/zombie-github.svg">
   </picture>
   
   <details>
-  <summary>🧟‍♂️ About the Zombie Hacker</summary>
+  <summary>🧟‍♂️ About the Zombie Animation</summary>
   <br>
   
-  - **Custom Animation**: 100% original zombie hacker infiltration concept
+  - **Based on Platane/snk**: Built using the proven architecture from the famous snake contribution animation
   - **Real GitHub Data**: Uses your actual contribution history  
-  - **Matrix Effects**: Scan lines, matrix rain, and hacking sequences
-  - **Interactive**: Click to view full zombie hacker experience
-  - **Auto-Generated**: Updates every 12 hours via GitHub Actions
+  - **Zombie Theme**: Cells turn red and show infection effects when the zombie visits them
+  - **Perfect Timing**: Infections happen exactly when the zombie moves over each cell
+  - **Auto-Generated**: Updates automatically with your latest contributions
   
   </details>
 </div>

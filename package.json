@@ -1,8 +1,12 @@
 {
-  "name": "zombie-hacker-visualizer",
+  "name": "zombie-github-generator",
+  "description": "Generate zombie-themed GitHub contribution animations based on Platane/snk",
+  "version": "1.0.0",
   "scripts": {
-    "start": "node scripts/fetchContributions.js",
-    "hack": "node scripts/fetchContributions.js && echo 🧟‍♂️ Ready to hack! Open public/index.html in your browser"
+    "generate": "node scripts/zombieSnk.js",
+    "start": "node scripts/zombieSnk.js"
   },
-  "type": "module"
+  "type": "module",
+  "author": "Nicholas Dobson",
+  "license": "MIT"
 }
