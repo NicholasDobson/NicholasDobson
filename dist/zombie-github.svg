@@ -74,1613 +74,1637 @@
         animation: infected1 16000ms linear infinite;
       }
       @keyframes infected1 {
-        0%, 1.47% { fill: var(--c1); }
-        1.57%, 100% { fill: var(--infected); }
+        0%, 1.45% { fill: var(--c1); }
+        1.55%, 100% { fill: var(--infected); }
       }
       .inf1 {
         animation: infection1 16000ms linear infinite;
       }
       @keyframes infection1 {
-        0%, 1.47% { opacity: 0; transform: scale(0); }
-        1.57% { opacity: 0.9; transform: scale(1.5); }
-        2.47% { opacity: 0.6; transform: scale(2.5); }
-        3.47% { opacity: 0; transform: scale(0); }
+        0%, 1.45% { opacity: 0; transform: scale(0); }
+        1.55% { opacity: 0.9; transform: scale(1.5); }
+        2.45% { opacity: 0.6; transform: scale(2.5); }
+        3.45% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull1 {
         animation: skull1 16000ms linear infinite;
       }
       @keyframes skull1 {
-        0%, 2.97% { opacity: 0; transform: scale(0); }
-        3.47%, 100% { opacity: 1; transform: scale(1); }
+        0%, 2.95% { opacity: 0; transform: scale(0); }
+        3.45%, 100% { opacity: 1; transform: scale(1); }
       }
       .c2 {
         animation: infected2 16000ms linear infinite;
       }
       @keyframes infected2 {
-        0%, 2.94% { fill: var(--c1); }
-        3.04%, 100% { fill: var(--infected); }
+        0%, 2.90% { fill: var(--c1); }
+        3.00%, 100% { fill: var(--infected); }
       }
       .inf2 {
         animation: infection2 16000ms linear infinite;
       }
       @keyframes infection2 {
-        0%, 2.94% { opacity: 0; transform: scale(0); }
-        3.04% { opacity: 0.9; transform: scale(1.5); }
-        3.94% { opacity: 0.6; transform: scale(2.5); }
-        4.94% { opacity: 0; transform: scale(0); }
+        0%, 2.90% { opacity: 0; transform: scale(0); }
+        3.00% { opacity: 0.9; transform: scale(1.5); }
+        3.90% { opacity: 0.6; transform: scale(2.5); }
+        4.90% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull2 {
         animation: skull2 16000ms linear infinite;
       }
       @keyframes skull2 {
-        0%, 4.44% { opacity: 0; transform: scale(0); }
-        4.94%, 100% { opacity: 1; transform: scale(1); }
+        0%, 4.40% { opacity: 0; transform: scale(0); }
+        4.90%, 100% { opacity: 1; transform: scale(1); }
       }
       .c3 {
         animation: infected3 16000ms linear infinite;
       }
       @keyframes infected3 {
-        0%, 4.41% { fill: var(--c2); }
-        4.51%, 100% { fill: var(--infected); }
+        0%, 4.35% { fill: var(--c2); }
+        4.45%, 100% { fill: var(--infected); }
       }
       .inf3 {
         animation: infection3 16000ms linear infinite;
       }
       @keyframes infection3 {
-        0%, 4.41% { opacity: 0; transform: scale(0); }
-        4.51% { opacity: 0.9; transform: scale(1.5); }
-        5.41% { opacity: 0.6; transform: scale(2.5); }
-        6.41% { opacity: 0; transform: scale(0); }
+        0%, 4.35% { opacity: 0; transform: scale(0); }
+        4.45% { opacity: 0.9; transform: scale(1.5); }
+        5.35% { opacity: 0.6; transform: scale(2.5); }
+        6.35% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull3 {
         animation: skull3 16000ms linear infinite;
       }
       @keyframes skull3 {
-        0%, 5.91% { opacity: 0; transform: scale(0); }
-        6.41%, 100% { opacity: 1; transform: scale(1); }
+        0%, 5.85% { opacity: 0; transform: scale(0); }
+        6.35%, 100% { opacity: 1; transform: scale(1); }
       }
       .c4 {
         animation: infected4 16000ms linear infinite;
       }
       @keyframes infected4 {
-        0%, 5.88% { fill: var(--c1); }
-        5.98%, 100% { fill: var(--infected); }
+        0%, 5.80% { fill: var(--c1); }
+        5.90%, 100% { fill: var(--infected); }
       }
       .inf4 {
         animation: infection4 16000ms linear infinite;
       }
       @keyframes infection4 {
-        0%, 5.88% { opacity: 0; transform: scale(0); }
-        5.98% { opacity: 0.9; transform: scale(1.5); }
-        6.88% { opacity: 0.6; transform: scale(2.5); }
-        7.88% { opacity: 0; transform: scale(0); }
+        0%, 5.80% { opacity: 0; transform: scale(0); }
+        5.90% { opacity: 0.9; transform: scale(1.5); }
+        6.80% { opacity: 0.6; transform: scale(2.5); }
+        7.80% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull4 {
         animation: skull4 16000ms linear infinite;
       }
       @keyframes skull4 {
-        0%, 7.38% { opacity: 0; transform: scale(0); }
-        7.88%, 100% { opacity: 1; transform: scale(1); }
+        0%, 7.30% { opacity: 0; transform: scale(0); }
+        7.80%, 100% { opacity: 1; transform: scale(1); }
       }
       .c5 {
         animation: infected5 16000ms linear infinite;
       }
       @keyframes infected5 {
-        0%, 14.71% { fill: var(--c1); }
-        14.81%, 100% { fill: var(--infected); }
+        0%, 14.49% { fill: var(--c1); }
+        14.59%, 100% { fill: var(--infected); }
       }
       .inf5 {
         animation: infection5 16000ms linear infinite;
       }
       @keyframes infection5 {
-        0%, 14.71% { opacity: 0; transform: scale(0); }
-        14.81% { opacity: 0.9; transform: scale(1.5); }
-        15.71% { opacity: 0.6; transform: scale(2.5); }
-        16.71% { opacity: 0; transform: scale(0); }
+        0%, 14.49% { opacity: 0; transform: scale(0); }
+        14.59% { opacity: 0.9; transform: scale(1.5); }
+        15.49% { opacity: 0.6; transform: scale(2.5); }
+        16.49% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull5 {
         animation: skull5 16000ms linear infinite;
       }
       @keyframes skull5 {
-        0%, 16.21% { opacity: 0; transform: scale(0); }
-        16.71%, 100% { opacity: 1; transform: scale(1); }
+        0%, 15.99% { opacity: 0; transform: scale(0); }
+        16.49%, 100% { opacity: 1; transform: scale(1); }
       }
       .c6 {
         animation: infected6 16000ms linear infinite;
       }
       @keyframes infected6 {
-        0%, 13.24% { fill: var(--c1); }
-        13.34%, 100% { fill: var(--infected); }
+        0%, 13.04% { fill: var(--c1); }
+        13.14%, 100% { fill: var(--infected); }
       }
       .inf6 {
         animation: infection6 16000ms linear infinite;
       }
       @keyframes infection6 {
-        0%, 13.24% { opacity: 0; transform: scale(0); }
-        13.34% { opacity: 0.9; transform: scale(1.5); }
-        14.24% { opacity: 0.6; transform: scale(2.5); }
-        15.24% { opacity: 0; transform: scale(0); }
+        0%, 13.04% { opacity: 0; transform: scale(0); }
+        13.14% { opacity: 0.9; transform: scale(1.5); }
+        14.04% { opacity: 0.6; transform: scale(2.5); }
+        15.04% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull6 {
         animation: skull6 16000ms linear infinite;
       }
       @keyframes skull6 {
-        0%, 14.74% { opacity: 0; transform: scale(0); }
-        15.24%, 100% { opacity: 1; transform: scale(1); }
+        0%, 14.54% { opacity: 0; transform: scale(0); }
+        15.04%, 100% { opacity: 1; transform: scale(1); }
       }
       .c7 {
         animation: infected7 16000ms linear infinite;
       }
       @keyframes infected7 {
-        0%, 11.76% { fill: var(--c1); }
-        11.86%, 100% { fill: var(--infected); }
+        0%, 11.59% { fill: var(--c1); }
+        11.69%, 100% { fill: var(--infected); }
       }
       .inf7 {
         animation: infection7 16000ms linear infinite;
       }
       @keyframes infection7 {
-        0%, 11.76% { opacity: 0; transform: scale(0); }
-        11.86% { opacity: 0.9; transform: scale(1.5); }
-        12.76% { opacity: 0.6; transform: scale(2.5); }
-        13.76% { opacity: 0; transform: scale(0); }
+        0%, 11.59% { opacity: 0; transform: scale(0); }
+        11.69% { opacity: 0.9; transform: scale(1.5); }
+        12.59% { opacity: 0.6; transform: scale(2.5); }
+        13.59% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull7 {
         animation: skull7 16000ms linear infinite;
       }
       @keyframes skull7 {
-        0%, 13.26% { opacity: 0; transform: scale(0); }
-        13.76%, 100% { opacity: 1; transform: scale(1); }
+        0%, 13.09% { opacity: 0; transform: scale(0); }
+        13.59%, 100% { opacity: 1; transform: scale(1); }
       }
       .c8 {
         animation: infected8 16000ms linear infinite;
       }
       @keyframes infected8 {
-        0%, 10.29% { fill: var(--c1); }
-        10.39%, 100% { fill: var(--infected); }
+        0%, 10.14% { fill: var(--c1); }
+        10.24%, 100% { fill: var(--infected); }
       }
       .inf8 {
         animation: infection8 16000ms linear infinite;
       }
       @keyframes infection8 {
-        0%, 10.29% { opacity: 0; transform: scale(0); }
-        10.39% { opacity: 0.9; transform: scale(1.5); }
-        11.29% { opacity: 0.6; transform: scale(2.5); }
-        12.29% { opacity: 0; transform: scale(0); }
+        0%, 10.14% { opacity: 0; transform: scale(0); }
+        10.24% { opacity: 0.9; transform: scale(1.5); }
+        11.14% { opacity: 0.6; transform: scale(2.5); }
+        12.14% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull8 {
         animation: skull8 16000ms linear infinite;
       }
       @keyframes skull8 {
-        0%, 11.79% { opacity: 0; transform: scale(0); }
-        12.29%, 100% { opacity: 1; transform: scale(1); }
+        0%, 11.64% { opacity: 0; transform: scale(0); }
+        12.14%, 100% { opacity: 1; transform: scale(1); }
       }
       .c9 {
         animation: infected9 16000ms linear infinite;
       }
       @keyframes infected9 {
-        0%, 8.82% { fill: var(--c1); }
-        8.92%, 100% { fill: var(--infected); }
+        0%, 8.70% { fill: var(--c1); }
+        8.80%, 100% { fill: var(--infected); }
       }
       .inf9 {
         animation: infection9 16000ms linear infinite;
       }
       @keyframes infection9 {
-        0%, 8.82% { opacity: 0; transform: scale(0); }
-        8.92% { opacity: 0.9; transform: scale(1.5); }
-        9.82% { opacity: 0.6; transform: scale(2.5); }
-        10.82% { opacity: 0; transform: scale(0); }
+        0%, 8.70% { opacity: 0; transform: scale(0); }
+        8.80% { opacity: 0.9; transform: scale(1.5); }
+        9.70% { opacity: 0.6; transform: scale(2.5); }
+        10.70% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull9 {
         animation: skull9 16000ms linear infinite;
       }
       @keyframes skull9 {
-        0%, 10.32% { opacity: 0; transform: scale(0); }
-        10.82%, 100% { opacity: 1; transform: scale(1); }
+        0%, 10.20% { opacity: 0; transform: scale(0); }
+        10.70%, 100% { opacity: 1; transform: scale(1); }
       }
       .c10 {
         animation: infected10 16000ms linear infinite;
       }
       @keyframes infected10 {
-        0%, 7.35% { fill: var(--c1); }
-        7.45%, 100% { fill: var(--infected); }
+        0%, 7.25% { fill: var(--c1); }
+        7.35%, 100% { fill: var(--infected); }
       }
       .inf10 {
         animation: infection10 16000ms linear infinite;
       }
       @keyframes infection10 {
-        0%, 7.35% { opacity: 0; transform: scale(0); }
-        7.45% { opacity: 0.9; transform: scale(1.5); }
-        8.35% { opacity: 0.6; transform: scale(2.5); }
-        9.35% { opacity: 0; transform: scale(0); }
+        0%, 7.25% { opacity: 0; transform: scale(0); }
+        7.35% { opacity: 0.9; transform: scale(1.5); }
+        8.25% { opacity: 0.6; transform: scale(2.5); }
+        9.25% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull10 {
         animation: skull10 16000ms linear infinite;
       }
       @keyframes skull10 {
-        0%, 8.85% { opacity: 0; transform: scale(0); }
-        9.35%, 100% { opacity: 1; transform: scale(1); }
+        0%, 8.75% { opacity: 0; transform: scale(0); }
+        9.25%, 100% { opacity: 1; transform: scale(1); }
       }
       .c11 {
         animation: infected11 16000ms linear infinite;
       }
       @keyframes infected11 {
-        0%, 16.18% { fill: var(--c1); }
-        16.28%, 100% { fill: var(--infected); }
+        0%, 15.94% { fill: var(--c1); }
+        16.04%, 100% { fill: var(--infected); }
       }
       .inf11 {
         animation: infection11 16000ms linear infinite;
       }
       @keyframes infection11 {
-        0%, 16.18% { opacity: 0; transform: scale(0); }
-        16.28% { opacity: 0.9; transform: scale(1.5); }
-        17.18% { opacity: 0.6; transform: scale(2.5); }
-        18.18% { opacity: 0; transform: scale(0); }
+        0%, 15.94% { opacity: 0; transform: scale(0); }
+        16.04% { opacity: 0.9; transform: scale(1.5); }
+        16.94% { opacity: 0.6; transform: scale(2.5); }
+        17.94% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull11 {
         animation: skull11 16000ms linear infinite;
       }
       @keyframes skull11 {
-        0%, 17.68% { opacity: 0; transform: scale(0); }
-        18.18%, 100% { opacity: 1; transform: scale(1); }
+        0%, 17.44% { opacity: 0; transform: scale(0); }
+        17.94%, 100% { opacity: 1; transform: scale(1); }
       }
       .c12 {
         animation: infected12 16000ms linear infinite;
       }
       @keyframes infected12 {
-        0%, 17.65% { fill: var(--c1); }
-        17.75%, 100% { fill: var(--infected); }
+        0%, 17.39% { fill: var(--c1); }
+        17.49%, 100% { fill: var(--infected); }
       }
       .inf12 {
         animation: infection12 16000ms linear infinite;
       }
       @keyframes infection12 {
-        0%, 17.65% { opacity: 0; transform: scale(0); }
-        17.75% { opacity: 0.9; transform: scale(1.5); }
-        18.65% { opacity: 0.6; transform: scale(2.5); }
-        19.65% { opacity: 0; transform: scale(0); }
+        0%, 17.39% { opacity: 0; transform: scale(0); }
+        17.49% { opacity: 0.9; transform: scale(1.5); }
+        18.39% { opacity: 0.6; transform: scale(2.5); }
+        19.39% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull12 {
         animation: skull12 16000ms linear infinite;
       }
       @keyframes skull12 {
-        0%, 19.15% { opacity: 0; transform: scale(0); }
-        19.65%, 100% { opacity: 1; transform: scale(1); }
+        0%, 18.89% { opacity: 0; transform: scale(0); }
+        19.39%, 100% { opacity: 1; transform: scale(1); }
       }
       .c13 {
         animation: infected13 16000ms linear infinite;
       }
       @keyframes infected13 {
-        0%, 22.06% { fill: var(--c1); }
-        22.16%, 100% { fill: var(--infected); }
+        0%, 21.74% { fill: var(--c1); }
+        21.84%, 100% { fill: var(--infected); }
       }
       .inf13 {
         animation: infection13 16000ms linear infinite;
       }
       @keyframes infection13 {
-        0%, 22.06% { opacity: 0; transform: scale(0); }
-        22.16% { opacity: 0.9; transform: scale(1.5); }
-        23.06% { opacity: 0.6; transform: scale(2.5); }
-        24.06% { opacity: 0; transform: scale(0); }
+        0%, 21.74% { opacity: 0; transform: scale(0); }
+        21.84% { opacity: 0.9; transform: scale(1.5); }
+        22.74% { opacity: 0.6; transform: scale(2.5); }
+        23.74% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull13 {
         animation: skull13 16000ms linear infinite;
       }
       @keyframes skull13 {
-        0%, 23.56% { opacity: 0; transform: scale(0); }
-        24.06%, 100% { opacity: 1; transform: scale(1); }
+        0%, 23.24% { opacity: 0; transform: scale(0); }
+        23.74%, 100% { opacity: 1; transform: scale(1); }
       }
       .c14 {
         animation: infected14 16000ms linear infinite;
       }
       @keyframes infected14 {
-        0%, 20.59% { fill: var(--c1); }
-        20.69%, 100% { fill: var(--infected); }
+        0%, 20.29% { fill: var(--c1); }
+        20.39%, 100% { fill: var(--infected); }
       }
       .inf14 {
         animation: infection14 16000ms linear infinite;
       }
       @keyframes infection14 {
-        0%, 20.59% { opacity: 0; transform: scale(0); }
-        20.69% { opacity: 0.9; transform: scale(1.5); }
-        21.59% { opacity: 0.6; transform: scale(2.5); }
-        22.59% { opacity: 0; transform: scale(0); }
+        0%, 20.29% { opacity: 0; transform: scale(0); }
+        20.39% { opacity: 0.9; transform: scale(1.5); }
+        21.29% { opacity: 0.6; transform: scale(2.5); }
+        22.29% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull14 {
         animation: skull14 16000ms linear infinite;
       }
       @keyframes skull14 {
-        0%, 22.09% { opacity: 0; transform: scale(0); }
-        22.59%, 100% { opacity: 1; transform: scale(1); }
+        0%, 21.79% { opacity: 0; transform: scale(0); }
+        22.29%, 100% { opacity: 1; transform: scale(1); }
       }
       .c15 {
         animation: infected15 16000ms linear infinite;
       }
       @keyframes infected15 {
-        0%, 19.12% { fill: var(--c1); }
-        19.22%, 100% { fill: var(--infected); }
+        0%, 18.84% { fill: var(--c1); }
+        18.94%, 100% { fill: var(--infected); }
       }
       .inf15 {
         animation: infection15 16000ms linear infinite;
       }
       @keyframes infection15 {
-        0%, 19.12% { opacity: 0; transform: scale(0); }
-        19.22% { opacity: 0.9; transform: scale(1.5); }
-        20.12% { opacity: 0.6; transform: scale(2.5); }
-        21.12% { opacity: 0; transform: scale(0); }
+        0%, 18.84% { opacity: 0; transform: scale(0); }
+        18.94% { opacity: 0.9; transform: scale(1.5); }
+        19.84% { opacity: 0.6; transform: scale(2.5); }
+        20.84% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull15 {
         animation: skull15 16000ms linear infinite;
       }
       @keyframes skull15 {
-        0%, 20.62% { opacity: 0; transform: scale(0); }
-        21.12%, 100% { opacity: 1; transform: scale(1); }
+        0%, 20.34% { opacity: 0; transform: scale(0); }
+        20.84%, 100% { opacity: 1; transform: scale(1); }
       }
       .c16 {
         animation: infected16 16000ms linear infinite;
       }
       @keyframes infected16 {
-        0%, 23.53% { fill: var(--c1); }
-        23.63%, 100% { fill: var(--infected); }
+        0%, 23.19% { fill: var(--c1); }
+        23.29%, 100% { fill: var(--infected); }
       }
       .inf16 {
         animation: infection16 16000ms linear infinite;
       }
       @keyframes infection16 {
-        0%, 23.53% { opacity: 0; transform: scale(0); }
-        23.63% { opacity: 0.9; transform: scale(1.5); }
-        24.53% { opacity: 0.6; transform: scale(2.5); }
-        25.53% { opacity: 0; transform: scale(0); }
+        0%, 23.19% { opacity: 0; transform: scale(0); }
+        23.29% { opacity: 0.9; transform: scale(1.5); }
+        24.19% { opacity: 0.6; transform: scale(2.5); }
+        25.19% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull16 {
         animation: skull16 16000ms linear infinite;
       }
       @keyframes skull16 {
-        0%, 25.03% { opacity: 0; transform: scale(0); }
-        25.53%, 100% { opacity: 1; transform: scale(1); }
+        0%, 24.69% { opacity: 0; transform: scale(0); }
+        25.19%, 100% { opacity: 1; transform: scale(1); }
       }
       .c17 {
         animation: infected17 16000ms linear infinite;
       }
       @keyframes infected17 {
-        0%, 25.00% { fill: var(--c2); }
-        25.10%, 100% { fill: var(--infected); }
+        0%, 24.64% { fill: var(--c2); }
+        24.74%, 100% { fill: var(--infected); }
       }
       .inf17 {
         animation: infection17 16000ms linear infinite;
       }
       @keyframes infection17 {
-        0%, 25.00% { opacity: 0; transform: scale(0); }
-        25.10% { opacity: 0.9; transform: scale(1.5); }
-        26.00% { opacity: 0.6; transform: scale(2.5); }
-        27.00% { opacity: 0; transform: scale(0); }
+        0%, 24.64% { opacity: 0; transform: scale(0); }
+        24.74% { opacity: 0.9; transform: scale(1.5); }
+        25.64% { opacity: 0.6; transform: scale(2.5); }
+        26.64% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull17 {
         animation: skull17 16000ms linear infinite;
       }
       @keyframes skull17 {
-        0%, 26.50% { opacity: 0; transform: scale(0); }
-        27.00%, 100% { opacity: 1; transform: scale(1); }
+        0%, 26.14% { opacity: 0; transform: scale(0); }
+        26.64%, 100% { opacity: 1; transform: scale(1); }
       }
       .c18 {
         animation: infected18 16000ms linear infinite;
       }
       @keyframes infected18 {
-        0%, 26.47% { fill: var(--c1); }
-        26.57%, 100% { fill: var(--infected); }
+        0%, 26.09% { fill: var(--c1); }
+        26.19%, 100% { fill: var(--infected); }
       }
       .inf18 {
         animation: infection18 16000ms linear infinite;
       }
       @keyframes infection18 {
-        0%, 26.47% { opacity: 0; transform: scale(0); }
-        26.57% { opacity: 0.9; transform: scale(1.5); }
-        27.47% { opacity: 0.6; transform: scale(2.5); }
-        28.47% { opacity: 0; transform: scale(0); }
+        0%, 26.09% { opacity: 0; transform: scale(0); }
+        26.19% { opacity: 0.9; transform: scale(1.5); }
+        27.09% { opacity: 0.6; transform: scale(2.5); }
+        28.09% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull18 {
         animation: skull18 16000ms linear infinite;
       }
       @keyframes skull18 {
-        0%, 27.97% { opacity: 0; transform: scale(0); }
-        28.47%, 100% { opacity: 1; transform: scale(1); }
+        0%, 27.59% { opacity: 0; transform: scale(0); }
+        28.09%, 100% { opacity: 1; transform: scale(1); }
       }
       .c19 {
         animation: infected19 16000ms linear infinite;
       }
       @keyframes infected19 {
-        0%, 27.94% { fill: var(--c2); }
-        28.04%, 100% { fill: var(--infected); }
+        0%, 27.54% { fill: var(--c2); }
+        27.64%, 100% { fill: var(--infected); }
       }
       .inf19 {
         animation: infection19 16000ms linear infinite;
       }
       @keyframes infection19 {
-        0%, 27.94% { opacity: 0; transform: scale(0); }
-        28.04% { opacity: 0.9; transform: scale(1.5); }
-        28.94% { opacity: 0.6; transform: scale(2.5); }
-        29.94% { opacity: 0; transform: scale(0); }
+        0%, 27.54% { opacity: 0; transform: scale(0); }
+        27.64% { opacity: 0.9; transform: scale(1.5); }
+        28.54% { opacity: 0.6; transform: scale(2.5); }
+        29.54% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull19 {
         animation: skull19 16000ms linear infinite;
       }
       @keyframes skull19 {
-        0%, 29.44% { opacity: 0; transform: scale(0); }
-        29.94%, 100% { opacity: 1; transform: scale(1); }
+        0%, 29.04% { opacity: 0; transform: scale(0); }
+        29.54%, 100% { opacity: 1; transform: scale(1); }
       }
       .c20 {
         animation: infected20 16000ms linear infinite;
       }
       @keyframes infected20 {
-        0%, 29.41% { fill: var(--c1); }
-        29.51%, 100% { fill: var(--infected); }
+        0%, 28.99% { fill: var(--c1); }
+        29.09%, 100% { fill: var(--infected); }
       }
       .inf20 {
         animation: infection20 16000ms linear infinite;
       }
       @keyframes infection20 {
-        0%, 29.41% { opacity: 0; transform: scale(0); }
-        29.51% { opacity: 0.9; transform: scale(1.5); }
-        30.41% { opacity: 0.6; transform: scale(2.5); }
-        31.41% { opacity: 0; transform: scale(0); }
+        0%, 28.99% { opacity: 0; transform: scale(0); }
+        29.09% { opacity: 0.9; transform: scale(1.5); }
+        29.99% { opacity: 0.6; transform: scale(2.5); }
+        30.99% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull20 {
         animation: skull20 16000ms linear infinite;
       }
       @keyframes skull20 {
-        0%, 30.91% { opacity: 0; transform: scale(0); }
-        31.41%, 100% { opacity: 1; transform: scale(1); }
+        0%, 30.49% { opacity: 0; transform: scale(0); }
+        30.99%, 100% { opacity: 1; transform: scale(1); }
       }
       .c21 {
         animation: infected21 16000ms linear infinite;
       }
       @keyframes infected21 {
-        0%, 30.88% { fill: var(--c1); }
-        30.98%, 100% { fill: var(--infected); }
+        0%, 30.43% { fill: var(--c1); }
+        30.53%, 100% { fill: var(--infected); }
       }
       .inf21 {
         animation: infection21 16000ms linear infinite;
       }
       @keyframes infection21 {
-        0%, 30.88% { opacity: 0; transform: scale(0); }
-        30.98% { opacity: 0.9; transform: scale(1.5); }
-        31.88% { opacity: 0.6; transform: scale(2.5); }
-        32.88% { opacity: 0; transform: scale(0); }
+        0%, 30.43% { opacity: 0; transform: scale(0); }
+        30.53% { opacity: 0.9; transform: scale(1.5); }
+        31.43% { opacity: 0.6; transform: scale(2.5); }
+        32.43% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull21 {
         animation: skull21 16000ms linear infinite;
       }
       @keyframes skull21 {
-        0%, 32.38% { opacity: 0; transform: scale(0); }
-        32.88%, 100% { opacity: 1; transform: scale(1); }
+        0%, 31.93% { opacity: 0; transform: scale(0); }
+        32.43%, 100% { opacity: 1; transform: scale(1); }
       }
       .c22 {
         animation: infected22 16000ms linear infinite;
       }
       @keyframes infected22 {
-        0%, 32.35% { fill: var(--c1); }
-        32.45%, 100% { fill: var(--infected); }
+        0%, 31.88% { fill: var(--c1); }
+        31.98%, 100% { fill: var(--infected); }
       }
       .inf22 {
         animation: infection22 16000ms linear infinite;
       }
       @keyframes infection22 {
-        0%, 32.35% { opacity: 0; transform: scale(0); }
-        32.45% { opacity: 0.9; transform: scale(1.5); }
-        33.35% { opacity: 0.6; transform: scale(2.5); }
-        34.35% { opacity: 0; transform: scale(0); }
+        0%, 31.88% { opacity: 0; transform: scale(0); }
+        31.98% { opacity: 0.9; transform: scale(1.5); }
+        32.88% { opacity: 0.6; transform: scale(2.5); }
+        33.88% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull22 {
         animation: skull22 16000ms linear infinite;
       }
       @keyframes skull22 {
-        0%, 33.85% { opacity: 0; transform: scale(0); }
-        34.35%, 100% { opacity: 1; transform: scale(1); }
+        0%, 33.38% { opacity: 0; transform: scale(0); }
+        33.88%, 100% { opacity: 1; transform: scale(1); }
       }
       .c23 {
         animation: infected23 16000ms linear infinite;
       }
       @keyframes infected23 {
-        0%, 33.82% { fill: var(--c1); }
-        33.92%, 100% { fill: var(--infected); }
+        0%, 33.33% { fill: var(--c1); }
+        33.43%, 100% { fill: var(--infected); }
       }
       .inf23 {
         animation: infection23 16000ms linear infinite;
       }
       @keyframes infection23 {
-        0%, 33.82% { opacity: 0; transform: scale(0); }
-        33.92% { opacity: 0.9; transform: scale(1.5); }
-        34.82% { opacity: 0.6; transform: scale(2.5); }
-        35.82% { opacity: 0; transform: scale(0); }
+        0%, 33.33% { opacity: 0; transform: scale(0); }
+        33.43% { opacity: 0.9; transform: scale(1.5); }
+        34.33% { opacity: 0.6; transform: scale(2.5); }
+        35.33% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull23 {
         animation: skull23 16000ms linear infinite;
       }
       @keyframes skull23 {
-        0%, 35.32% { opacity: 0; transform: scale(0); }
-        35.82%, 100% { opacity: 1; transform: scale(1); }
+        0%, 34.83% { opacity: 0; transform: scale(0); }
+        35.33%, 100% { opacity: 1; transform: scale(1); }
       }
       .c24 {
         animation: infected24 16000ms linear infinite;
       }
       @keyframes infected24 {
-        0%, 35.29% { fill: var(--c1); }
-        35.39%, 100% { fill: var(--infected); }
+        0%, 34.78% { fill: var(--c1); }
+        34.88%, 100% { fill: var(--infected); }
       }
       .inf24 {
         animation: infection24 16000ms linear infinite;
       }
       @keyframes infection24 {
-        0%, 35.29% { opacity: 0; transform: scale(0); }
-        35.39% { opacity: 0.9; transform: scale(1.5); }
-        36.29% { opacity: 0.6; transform: scale(2.5); }
-        37.29% { opacity: 0; transform: scale(0); }
+        0%, 34.78% { opacity: 0; transform: scale(0); }
+        34.88% { opacity: 0.9; transform: scale(1.5); }
+        35.78% { opacity: 0.6; transform: scale(2.5); }
+        36.78% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull24 {
         animation: skull24 16000ms linear infinite;
       }
       @keyframes skull24 {
-        0%, 36.79% { opacity: 0; transform: scale(0); }
-        37.29%, 100% { opacity: 1; transform: scale(1); }
+        0%, 36.28% { opacity: 0; transform: scale(0); }
+        36.78%, 100% { opacity: 1; transform: scale(1); }
       }
       .c25 {
         animation: infected25 16000ms linear infinite;
       }
       @keyframes infected25 {
-        0%, 38.24% { fill: var(--c1); }
-        38.34%, 100% { fill: var(--infected); }
+        0%, 37.68% { fill: var(--c1); }
+        37.78%, 100% { fill: var(--infected); }
       }
       .inf25 {
         animation: infection25 16000ms linear infinite;
       }
       @keyframes infection25 {
-        0%, 38.24% { opacity: 0; transform: scale(0); }
-        38.34% { opacity: 0.9; transform: scale(1.5); }
-        39.24% { opacity: 0.6; transform: scale(2.5); }
-        40.24% { opacity: 0; transform: scale(0); }
+        0%, 37.68% { opacity: 0; transform: scale(0); }
+        37.78% { opacity: 0.9; transform: scale(1.5); }
+        38.68% { opacity: 0.6; transform: scale(2.5); }
+        39.68% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull25 {
         animation: skull25 16000ms linear infinite;
       }
       @keyframes skull25 {
-        0%, 39.74% { opacity: 0; transform: scale(0); }
-        40.24%, 100% { opacity: 1; transform: scale(1); }
+        0%, 39.18% { opacity: 0; transform: scale(0); }
+        39.68%, 100% { opacity: 1; transform: scale(1); }
       }
       .c26 {
         animation: infected26 16000ms linear infinite;
       }
       @keyframes infected26 {
-        0%, 36.76% { fill: var(--c4); }
-        36.86%, 100% { fill: var(--infected); }
+        0%, 36.23% { fill: var(--c4); }
+        36.33%, 100% { fill: var(--infected); }
       }
       .inf26 {
         animation: infection26 16000ms linear infinite;
       }
       @keyframes infection26 {
-        0%, 36.76% { opacity: 0; transform: scale(0); }
-        36.86% { opacity: 0.9; transform: scale(1.5); }
-        37.76% { opacity: 0.6; transform: scale(2.5); }
-        38.76% { opacity: 0; transform: scale(0); }
+        0%, 36.23% { opacity: 0; transform: scale(0); }
+        36.33% { opacity: 0.9; transform: scale(1.5); }
+        37.23% { opacity: 0.6; transform: scale(2.5); }
+        38.23% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull26 {
         animation: skull26 16000ms linear infinite;
       }
       @keyframes skull26 {
-        0%, 38.26% { opacity: 0; transform: scale(0); }
-        38.76%, 100% { opacity: 1; transform: scale(1); }
+        0%, 37.73% { opacity: 0; transform: scale(0); }
+        38.23%, 100% { opacity: 1; transform: scale(1); }
       }
       .c27 {
         animation: infected27 16000ms linear infinite;
       }
       @keyframes infected27 {
-        0%, 39.71% { fill: var(--c1); }
-        39.81%, 100% { fill: var(--infected); }
+        0%, 39.13% { fill: var(--c1); }
+        39.23%, 100% { fill: var(--infected); }
       }
       .inf27 {
         animation: infection27 16000ms linear infinite;
       }
       @keyframes infection27 {
-        0%, 39.71% { opacity: 0; transform: scale(0); }
-        39.81% { opacity: 0.9; transform: scale(1.5); }
-        40.71% { opacity: 0.6; transform: scale(2.5); }
-        41.71% { opacity: 0; transform: scale(0); }
+        0%, 39.13% { opacity: 0; transform: scale(0); }
+        39.23% { opacity: 0.9; transform: scale(1.5); }
+        40.13% { opacity: 0.6; transform: scale(2.5); }
+        41.13% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull27 {
         animation: skull27 16000ms linear infinite;
       }
       @keyframes skull27 {
-        0%, 41.21% { opacity: 0; transform: scale(0); }
-        41.71%, 100% { opacity: 1; transform: scale(1); }
+        0%, 40.63% { opacity: 0; transform: scale(0); }
+        41.13%, 100% { opacity: 1; transform: scale(1); }
       }
       .c28 {
         animation: infected28 16000ms linear infinite;
       }
       @keyframes infected28 {
-        0%, 41.18% { fill: var(--c1); }
-        41.28%, 100% { fill: var(--infected); }
+        0%, 40.58% { fill: var(--c1); }
+        40.68%, 100% { fill: var(--infected); }
       }
       .inf28 {
         animation: infection28 16000ms linear infinite;
       }
       @keyframes infection28 {
-        0%, 41.18% { opacity: 0; transform: scale(0); }
-        41.28% { opacity: 0.9; transform: scale(1.5); }
-        42.18% { opacity: 0.6; transform: scale(2.5); }
-        43.18% { opacity: 0; transform: scale(0); }
+        0%, 40.58% { opacity: 0; transform: scale(0); }
+        40.68% { opacity: 0.9; transform: scale(1.5); }
+        41.58% { opacity: 0.6; transform: scale(2.5); }
+        42.58% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull28 {
         animation: skull28 16000ms linear infinite;
       }
       @keyframes skull28 {
-        0%, 42.68% { opacity: 0; transform: scale(0); }
-        43.18%, 100% { opacity: 1; transform: scale(1); }
+        0%, 42.08% { opacity: 0; transform: scale(0); }
+        42.58%, 100% { opacity: 1; transform: scale(1); }
       }
       .c29 {
         animation: infected29 16000ms linear infinite;
       }
       @keyframes infected29 {
-        0%, 42.65% { fill: var(--c1); }
-        42.75%, 100% { fill: var(--infected); }
+        0%, 42.03% { fill: var(--c1); }
+        42.13%, 100% { fill: var(--infected); }
       }
       .inf29 {
         animation: infection29 16000ms linear infinite;
       }
       @keyframes infection29 {
-        0%, 42.65% { opacity: 0; transform: scale(0); }
-        42.75% { opacity: 0.9; transform: scale(1.5); }
-        43.65% { opacity: 0.6; transform: scale(2.5); }
-        44.65% { opacity: 0; transform: scale(0); }
+        0%, 42.03% { opacity: 0; transform: scale(0); }
+        42.13% { opacity: 0.9; transform: scale(1.5); }
+        43.03% { opacity: 0.6; transform: scale(2.5); }
+        44.03% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull29 {
         animation: skull29 16000ms linear infinite;
       }
       @keyframes skull29 {
-        0%, 44.15% { opacity: 0; transform: scale(0); }
-        44.65%, 100% { opacity: 1; transform: scale(1); }
+        0%, 43.53% { opacity: 0; transform: scale(0); }
+        44.03%, 100% { opacity: 1; transform: scale(1); }
       }
       .c30 {
         animation: infected30 16000ms linear infinite;
       }
       @keyframes infected30 {
-        0%, 44.12% { fill: var(--c1); }
-        44.22%, 100% { fill: var(--infected); }
+        0%, 43.48% { fill: var(--c1); }
+        43.58%, 100% { fill: var(--infected); }
       }
       .inf30 {
         animation: infection30 16000ms linear infinite;
       }
       @keyframes infection30 {
-        0%, 44.12% { opacity: 0; transform: scale(0); }
-        44.22% { opacity: 0.9; transform: scale(1.5); }
-        45.12% { opacity: 0.6; transform: scale(2.5); }
-        46.12% { opacity: 0; transform: scale(0); }
+        0%, 43.48% { opacity: 0; transform: scale(0); }
+        43.58% { opacity: 0.9; transform: scale(1.5); }
+        44.48% { opacity: 0.6; transform: scale(2.5); }
+        45.48% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull30 {
         animation: skull30 16000ms linear infinite;
       }
       @keyframes skull30 {
-        0%, 45.62% { opacity: 0; transform: scale(0); }
-        46.12%, 100% { opacity: 1; transform: scale(1); }
+        0%, 44.98% { opacity: 0; transform: scale(0); }
+        45.48%, 100% { opacity: 1; transform: scale(1); }
       }
       .c31 {
         animation: infected31 16000ms linear infinite;
       }
       @keyframes infected31 {
-        0%, 47.06% { fill: var(--c1); }
-        47.16%, 100% { fill: var(--infected); }
+        0%, 46.38% { fill: var(--c1); }
+        46.48%, 100% { fill: var(--infected); }
       }
       .inf31 {
         animation: infection31 16000ms linear infinite;
       }
       @keyframes infection31 {
-        0%, 47.06% { opacity: 0; transform: scale(0); }
-        47.16% { opacity: 0.9; transform: scale(1.5); }
-        48.06% { opacity: 0.6; transform: scale(2.5); }
-        49.06% { opacity: 0; transform: scale(0); }
+        0%, 46.38% { opacity: 0; transform: scale(0); }
+        46.48% { opacity: 0.9; transform: scale(1.5); }
+        47.38% { opacity: 0.6; transform: scale(2.5); }
+        48.38% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull31 {
         animation: skull31 16000ms linear infinite;
       }
       @keyframes skull31 {
-        0%, 48.56% { opacity: 0; transform: scale(0); }
-        49.06%, 100% { opacity: 1; transform: scale(1); }
+        0%, 47.88% { opacity: 0; transform: scale(0); }
+        48.38%, 100% { opacity: 1; transform: scale(1); }
       }
       .c32 {
         animation: infected32 16000ms linear infinite;
       }
       @keyframes infected32 {
-        0%, 45.59% { fill: var(--c1); }
-        45.69%, 100% { fill: var(--infected); }
+        0%, 44.93% { fill: var(--c1); }
+        45.03%, 100% { fill: var(--infected); }
       }
       .inf32 {
         animation: infection32 16000ms linear infinite;
       }
       @keyframes infection32 {
-        0%, 45.59% { opacity: 0; transform: scale(0); }
-        45.69% { opacity: 0.9; transform: scale(1.5); }
-        46.59% { opacity: 0.6; transform: scale(2.5); }
-        47.59% { opacity: 0; transform: scale(0); }
+        0%, 44.93% { opacity: 0; transform: scale(0); }
+        45.03% { opacity: 0.9; transform: scale(1.5); }
+        45.93% { opacity: 0.6; transform: scale(2.5); }
+        46.93% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull32 {
         animation: skull32 16000ms linear infinite;
       }
       @keyframes skull32 {
-        0%, 47.09% { opacity: 0; transform: scale(0); }
-        47.59%, 100% { opacity: 1; transform: scale(1); }
+        0%, 46.43% { opacity: 0; transform: scale(0); }
+        46.93%, 100% { opacity: 1; transform: scale(1); }
       }
       .c33 {
         animation: infected33 16000ms linear infinite;
       }
       @keyframes infected33 {
-        0%, 48.53% { fill: var(--c2); }
-        48.63%, 100% { fill: var(--infected); }
+        0%, 47.83% { fill: var(--c2); }
+        47.93%, 100% { fill: var(--infected); }
       }
       .inf33 {
         animation: infection33 16000ms linear infinite;
       }
       @keyframes infection33 {
-        0%, 48.53% { opacity: 0; transform: scale(0); }
-        48.63% { opacity: 0.9; transform: scale(1.5); }
-        49.53% { opacity: 0.6; transform: scale(2.5); }
-        50.53% { opacity: 0; transform: scale(0); }
+        0%, 47.83% { opacity: 0; transform: scale(0); }
+        47.93% { opacity: 0.9; transform: scale(1.5); }
+        48.83% { opacity: 0.6; transform: scale(2.5); }
+        49.83% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull33 {
         animation: skull33 16000ms linear infinite;
       }
       @keyframes skull33 {
-        0%, 50.03% { opacity: 0; transform: scale(0); }
-        50.53%, 100% { opacity: 1; transform: scale(1); }
+        0%, 49.33% { opacity: 0; transform: scale(0); }
+        49.83%, 100% { opacity: 1; transform: scale(1); }
       }
       .c34 {
         animation: infected34 16000ms linear infinite;
       }
       @keyframes infected34 {
-        0%, 50.00% { fill: var(--c4); }
-        50.10%, 100% { fill: var(--infected); }
+        0%, 49.28% { fill: var(--c4); }
+        49.38%, 100% { fill: var(--infected); }
       }
       .inf34 {
         animation: infection34 16000ms linear infinite;
       }
       @keyframes infection34 {
-        0%, 50.00% { opacity: 0; transform: scale(0); }
-        50.10% { opacity: 0.9; transform: scale(1.5); }
-        51.00% { opacity: 0.6; transform: scale(2.5); }
-        52.00% { opacity: 0; transform: scale(0); }
+        0%, 49.28% { opacity: 0; transform: scale(0); }
+        49.38% { opacity: 0.9; transform: scale(1.5); }
+        50.28% { opacity: 0.6; transform: scale(2.5); }
+        51.28% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull34 {
         animation: skull34 16000ms linear infinite;
       }
       @keyframes skull34 {
-        0%, 51.50% { opacity: 0; transform: scale(0); }
-        52.00%, 100% { opacity: 1; transform: scale(1); }
+        0%, 50.78% { opacity: 0; transform: scale(0); }
+        51.28%, 100% { opacity: 1; transform: scale(1); }
       }
       .c35 {
         animation: infected35 16000ms linear infinite;
       }
       @keyframes infected35 {
-        0%, 51.47% { fill: var(--c4); }
-        51.57%, 100% { fill: var(--infected); }
+        0%, 50.72% { fill: var(--c4); }
+        50.82%, 100% { fill: var(--infected); }
       }
       .inf35 {
         animation: infection35 16000ms linear infinite;
       }
       @keyframes infection35 {
-        0%, 51.47% { opacity: 0; transform: scale(0); }
-        51.57% { opacity: 0.9; transform: scale(1.5); }
-        52.47% { opacity: 0.6; transform: scale(2.5); }
-        53.47% { opacity: 0; transform: scale(0); }
+        0%, 50.72% { opacity: 0; transform: scale(0); }
+        50.82% { opacity: 0.9; transform: scale(1.5); }
+        51.72% { opacity: 0.6; transform: scale(2.5); }
+        52.72% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull35 {
         animation: skull35 16000ms linear infinite;
       }
       @keyframes skull35 {
-        0%, 52.97% { opacity: 0; transform: scale(0); }
-        53.47%, 100% { opacity: 1; transform: scale(1); }
+        0%, 52.22% { opacity: 0; transform: scale(0); }
+        52.72%, 100% { opacity: 1; transform: scale(1); }
       }
       .c36 {
         animation: infected36 16000ms linear infinite;
       }
       @keyframes infected36 {
-        0%, 52.94% { fill: var(--c3); }
-        53.04%, 100% { fill: var(--infected); }
+        0%, 52.17% { fill: var(--c3); }
+        52.27%, 100% { fill: var(--infected); }
       }
       .inf36 {
         animation: infection36 16000ms linear infinite;
       }
       @keyframes infection36 {
-        0%, 52.94% { opacity: 0; transform: scale(0); }
-        53.04% { opacity: 0.9; transform: scale(1.5); }
-        53.94% { opacity: 0.6; transform: scale(2.5); }
-        54.94% { opacity: 0; transform: scale(0); }
+        0%, 52.17% { opacity: 0; transform: scale(0); }
+        52.27% { opacity: 0.9; transform: scale(1.5); }
+        53.17% { opacity: 0.6; transform: scale(2.5); }
+        54.17% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull36 {
         animation: skull36 16000ms linear infinite;
       }
       @keyframes skull36 {
-        0%, 54.44% { opacity: 0; transform: scale(0); }
-        54.94%, 100% { opacity: 1; transform: scale(1); }
+        0%, 53.67% { opacity: 0; transform: scale(0); }
+        54.17%, 100% { opacity: 1; transform: scale(1); }
       }
       .c37 {
         animation: infected37 16000ms linear infinite;
       }
       @keyframes infected37 {
-        0%, 54.41% { fill: var(--c1); }
-        54.51%, 100% { fill: var(--infected); }
+        0%, 53.62% { fill: var(--c1); }
+        53.72%, 100% { fill: var(--infected); }
       }
       .inf37 {
         animation: infection37 16000ms linear infinite;
       }
       @keyframes infection37 {
-        0%, 54.41% { opacity: 0; transform: scale(0); }
-        54.51% { opacity: 0.9; transform: scale(1.5); }
-        55.41% { opacity: 0.6; transform: scale(2.5); }
-        56.41% { opacity: 0; transform: scale(0); }
+        0%, 53.62% { opacity: 0; transform: scale(0); }
+        53.72% { opacity: 0.9; transform: scale(1.5); }
+        54.62% { opacity: 0.6; transform: scale(2.5); }
+        55.62% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull37 {
         animation: skull37 16000ms linear infinite;
       }
       @keyframes skull37 {
-        0%, 55.91% { opacity: 0; transform: scale(0); }
-        56.41%, 100% { opacity: 1; transform: scale(1); }
+        0%, 55.12% { opacity: 0; transform: scale(0); }
+        55.62%, 100% { opacity: 1; transform: scale(1); }
       }
       .c38 {
         animation: infected38 16000ms linear infinite;
       }
       @keyframes infected38 {
-        0%, 55.88% { fill: var(--c1); }
-        55.98%, 100% { fill: var(--infected); }
+        0%, 55.07% { fill: var(--c1); }
+        55.17%, 100% { fill: var(--infected); }
       }
       .inf38 {
         animation: infection38 16000ms linear infinite;
       }
       @keyframes infection38 {
-        0%, 55.88% { opacity: 0; transform: scale(0); }
-        55.98% { opacity: 0.9; transform: scale(1.5); }
-        56.88% { opacity: 0.6; transform: scale(2.5); }
-        57.88% { opacity: 0; transform: scale(0); }
+        0%, 55.07% { opacity: 0; transform: scale(0); }
+        55.17% { opacity: 0.9; transform: scale(1.5); }
+        56.07% { opacity: 0.6; transform: scale(2.5); }
+        57.07% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull38 {
         animation: skull38 16000ms linear infinite;
       }
       @keyframes skull38 {
-        0%, 57.38% { opacity: 0; transform: scale(0); }
-        57.88%, 100% { opacity: 1; transform: scale(1); }
+        0%, 56.57% { opacity: 0; transform: scale(0); }
+        57.07%, 100% { opacity: 1; transform: scale(1); }
       }
       .c39 {
         animation: infected39 16000ms linear infinite;
       }
       @keyframes infected39 {
-        0%, 57.35% { fill: var(--c1); }
-        57.45%, 100% { fill: var(--infected); }
+        0%, 56.52% { fill: var(--c1); }
+        56.62%, 100% { fill: var(--infected); }
       }
       .inf39 {
         animation: infection39 16000ms linear infinite;
       }
       @keyframes infection39 {
-        0%, 57.35% { opacity: 0; transform: scale(0); }
-        57.45% { opacity: 0.9; transform: scale(1.5); }
-        58.35% { opacity: 0.6; transform: scale(2.5); }
-        59.35% { opacity: 0; transform: scale(0); }
+        0%, 56.52% { opacity: 0; transform: scale(0); }
+        56.62% { opacity: 0.9; transform: scale(1.5); }
+        57.52% { opacity: 0.6; transform: scale(2.5); }
+        58.52% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull39 {
         animation: skull39 16000ms linear infinite;
       }
       @keyframes skull39 {
-        0%, 58.85% { opacity: 0; transform: scale(0); }
-        59.35%, 100% { opacity: 1; transform: scale(1); }
+        0%, 58.02% { opacity: 0; transform: scale(0); }
+        58.52%, 100% { opacity: 1; transform: scale(1); }
       }
       .c40 {
         animation: infected40 16000ms linear infinite;
       }
       @keyframes infected40 {
-        0%, 58.82% { fill: var(--c1); }
-        58.92%, 100% { fill: var(--infected); }
+        0%, 57.97% { fill: var(--c1); }
+        58.07%, 100% { fill: var(--infected); }
       }
       .inf40 {
         animation: infection40 16000ms linear infinite;
       }
       @keyframes infection40 {
-        0%, 58.82% { opacity: 0; transform: scale(0); }
-        58.92% { opacity: 0.9; transform: scale(1.5); }
-        59.82% { opacity: 0.6; transform: scale(2.5); }
-        60.82% { opacity: 0; transform: scale(0); }
+        0%, 57.97% { opacity: 0; transform: scale(0); }
+        58.07% { opacity: 0.9; transform: scale(1.5); }
+        58.97% { opacity: 0.6; transform: scale(2.5); }
+        59.97% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull40 {
         animation: skull40 16000ms linear infinite;
       }
       @keyframes skull40 {
-        0%, 60.32% { opacity: 0; transform: scale(0); }
-        60.82%, 100% { opacity: 1; transform: scale(1); }
+        0%, 59.47% { opacity: 0; transform: scale(0); }
+        59.97%, 100% { opacity: 1; transform: scale(1); }
       }
       .c41 {
         animation: infected41 16000ms linear infinite;
       }
       @keyframes infected41 {
-        0%, 60.29% { fill: var(--c1); }
-        60.39%, 100% { fill: var(--infected); }
+        0%, 59.42% { fill: var(--c1); }
+        59.52%, 100% { fill: var(--infected); }
       }
       .inf41 {
         animation: infection41 16000ms linear infinite;
       }
       @keyframes infection41 {
-        0%, 60.29% { opacity: 0; transform: scale(0); }
-        60.39% { opacity: 0.9; transform: scale(1.5); }
-        61.29% { opacity: 0.6; transform: scale(2.5); }
-        62.29% { opacity: 0; transform: scale(0); }
+        0%, 59.42% { opacity: 0; transform: scale(0); }
+        59.52% { opacity: 0.9; transform: scale(1.5); }
+        60.42% { opacity: 0.6; transform: scale(2.5); }
+        61.42% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull41 {
         animation: skull41 16000ms linear infinite;
       }
       @keyframes skull41 {
-        0%, 61.79% { opacity: 0; transform: scale(0); }
-        62.29%, 100% { opacity: 1; transform: scale(1); }
+        0%, 60.92% { opacity: 0; transform: scale(0); }
+        61.42%, 100% { opacity: 1; transform: scale(1); }
       }
       .c42 {
         animation: infected42 16000ms linear infinite;
       }
       @keyframes infected42 {
-        0%, 63.24% { fill: var(--c1); }
-        63.34%, 100% { fill: var(--infected); }
+        0%, 62.32% { fill: var(--c1); }
+        62.42%, 100% { fill: var(--infected); }
       }
       .inf42 {
         animation: infection42 16000ms linear infinite;
       }
       @keyframes infection42 {
-        0%, 63.24% { opacity: 0; transform: scale(0); }
-        63.34% { opacity: 0.9; transform: scale(1.5); }
-        64.24% { opacity: 0.6; transform: scale(2.5); }
-        65.24% { opacity: 0; transform: scale(0); }
+        0%, 62.32% { opacity: 0; transform: scale(0); }
+        62.42% { opacity: 0.9; transform: scale(1.5); }
+        63.32% { opacity: 0.6; transform: scale(2.5); }
+        64.32% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull42 {
         animation: skull42 16000ms linear infinite;
       }
       @keyframes skull42 {
-        0%, 64.74% { opacity: 0; transform: scale(0); }
-        65.24%, 100% { opacity: 1; transform: scale(1); }
+        0%, 63.82% { opacity: 0; transform: scale(0); }
+        64.32%, 100% { opacity: 1; transform: scale(1); }
       }
       .c43 {
         animation: infected43 16000ms linear infinite;
       }
       @keyframes infected43 {
-        0%, 61.76% { fill: var(--c1); }
-        61.86%, 100% { fill: var(--infected); }
+        0%, 60.87% { fill: var(--c1); }
+        60.97%, 100% { fill: var(--infected); }
       }
       .inf43 {
         animation: infection43 16000ms linear infinite;
       }
       @keyframes infection43 {
-        0%, 61.76% { opacity: 0; transform: scale(0); }
-        61.86% { opacity: 0.9; transform: scale(1.5); }
-        62.76% { opacity: 0.6; transform: scale(2.5); }
-        63.76% { opacity: 0; transform: scale(0); }
+        0%, 60.87% { opacity: 0; transform: scale(0); }
+        60.97% { opacity: 0.9; transform: scale(1.5); }
+        61.87% { opacity: 0.6; transform: scale(2.5); }
+        62.87% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull43 {
         animation: skull43 16000ms linear infinite;
       }
       @keyframes skull43 {
-        0%, 63.26% { opacity: 0; transform: scale(0); }
-        63.76%, 100% { opacity: 1; transform: scale(1); }
+        0%, 62.37% { opacity: 0; transform: scale(0); }
+        62.87%, 100% { opacity: 1; transform: scale(1); }
       }
       .c44 {
         animation: infected44 16000ms linear infinite;
       }
       @keyframes infected44 {
-        0%, 64.71% { fill: var(--c1); }
-        64.81%, 100% { fill: var(--infected); }
+        0%, 63.77% { fill: var(--c1); }
+        63.87%, 100% { fill: var(--infected); }
       }
       .inf44 {
         animation: infection44 16000ms linear infinite;
       }
       @keyframes infection44 {
-        0%, 64.71% { opacity: 0; transform: scale(0); }
-        64.81% { opacity: 0.9; transform: scale(1.5); }
-        65.71% { opacity: 0.6; transform: scale(2.5); }
-        66.71% { opacity: 0; transform: scale(0); }
+        0%, 63.77% { opacity: 0; transform: scale(0); }
+        63.87% { opacity: 0.9; transform: scale(1.5); }
+        64.77% { opacity: 0.6; transform: scale(2.5); }
+        65.77% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull44 {
         animation: skull44 16000ms linear infinite;
       }
       @keyframes skull44 {
-        0%, 66.21% { opacity: 0; transform: scale(0); }
-        66.71%, 100% { opacity: 1; transform: scale(1); }
+        0%, 65.27% { opacity: 0; transform: scale(0); }
+        65.77%, 100% { opacity: 1; transform: scale(1); }
       }
       .c45 {
         animation: infected45 16000ms linear infinite;
       }
       @keyframes infected45 {
-        0%, 69.12% { fill: var(--c1); }
-        69.22%, 100% { fill: var(--infected); }
+        0%, 68.12% { fill: var(--c1); }
+        68.22%, 100% { fill: var(--infected); }
       }
       .inf45 {
         animation: infection45 16000ms linear infinite;
       }
       @keyframes infection45 {
-        0%, 69.12% { opacity: 0; transform: scale(0); }
-        69.22% { opacity: 0.9; transform: scale(1.5); }
-        70.12% { opacity: 0.6; transform: scale(2.5); }
-        71.12% { opacity: 0; transform: scale(0); }
+        0%, 68.12% { opacity: 0; transform: scale(0); }
+        68.22% { opacity: 0.9; transform: scale(1.5); }
+        69.12% { opacity: 0.6; transform: scale(2.5); }
+        70.12% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull45 {
         animation: skull45 16000ms linear infinite;
       }
       @keyframes skull45 {
-        0%, 70.62% { opacity: 0; transform: scale(0); }
-        71.12%, 100% { opacity: 1; transform: scale(1); }
+        0%, 69.62% { opacity: 0; transform: scale(0); }
+        70.12%, 100% { opacity: 1; transform: scale(1); }
       }
       .c46 {
         animation: infected46 16000ms linear infinite;
       }
       @keyframes infected46 {
-        0%, 67.65% { fill: var(--c3); }
-        67.75%, 100% { fill: var(--infected); }
+        0%, 66.67% { fill: var(--c3); }
+        66.77%, 100% { fill: var(--infected); }
       }
       .inf46 {
         animation: infection46 16000ms linear infinite;
       }
       @keyframes infection46 {
-        0%, 67.65% { opacity: 0; transform: scale(0); }
-        67.75% { opacity: 0.9; transform: scale(1.5); }
-        68.65% { opacity: 0.6; transform: scale(2.5); }
-        69.65% { opacity: 0; transform: scale(0); }
+        0%, 66.67% { opacity: 0; transform: scale(0); }
+        66.77% { opacity: 0.9; transform: scale(1.5); }
+        67.67% { opacity: 0.6; transform: scale(2.5); }
+        68.67% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull46 {
         animation: skull46 16000ms linear infinite;
       }
       @keyframes skull46 {
-        0%, 69.15% { opacity: 0; transform: scale(0); }
-        69.65%, 100% { opacity: 1; transform: scale(1); }
+        0%, 68.17% { opacity: 0; transform: scale(0); }
+        68.67%, 100% { opacity: 1; transform: scale(1); }
       }
       .c47 {
         animation: infected47 16000ms linear infinite;
       }
       @keyframes infected47 {
-        0%, 66.18% { fill: var(--c3); }
-        66.28%, 100% { fill: var(--infected); }
+        0%, 65.22% { fill: var(--c3); }
+        65.32%, 100% { fill: var(--infected); }
       }
       .inf47 {
         animation: infection47 16000ms linear infinite;
       }
       @keyframes infection47 {
-        0%, 66.18% { opacity: 0; transform: scale(0); }
-        66.28% { opacity: 0.9; transform: scale(1.5); }
-        67.18% { opacity: 0.6; transform: scale(2.5); }
-        68.18% { opacity: 0; transform: scale(0); }
+        0%, 65.22% { opacity: 0; transform: scale(0); }
+        65.32% { opacity: 0.9; transform: scale(1.5); }
+        66.22% { opacity: 0.6; transform: scale(2.5); }
+        67.22% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull47 {
         animation: skull47 16000ms linear infinite;
       }
       @keyframes skull47 {
-        0%, 67.68% { opacity: 0; transform: scale(0); }
-        68.18%, 100% { opacity: 1; transform: scale(1); }
+        0%, 66.72% { opacity: 0; transform: scale(0); }
+        67.22%, 100% { opacity: 1; transform: scale(1); }
       }
       .c48 {
         animation: infected48 16000ms linear infinite;
       }
       @keyframes infected48 {
-        0%, 70.59% { fill: var(--c1); }
-        70.69%, 100% { fill: var(--infected); }
+        0%, 69.57% { fill: var(--c1); }
+        69.67%, 100% { fill: var(--infected); }
       }
       .inf48 {
         animation: infection48 16000ms linear infinite;
       }
       @keyframes infection48 {
-        0%, 70.59% { opacity: 0; transform: scale(0); }
-        70.69% { opacity: 0.9; transform: scale(1.5); }
-        71.59% { opacity: 0.6; transform: scale(2.5); }
-        72.59% { opacity: 0; transform: scale(0); }
+        0%, 69.57% { opacity: 0; transform: scale(0); }
+        69.67% { opacity: 0.9; transform: scale(1.5); }
+        70.57% { opacity: 0.6; transform: scale(2.5); }
+        71.57% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull48 {
         animation: skull48 16000ms linear infinite;
       }
       @keyframes skull48 {
-        0%, 72.09% { opacity: 0; transform: scale(0); }
-        72.59%, 100% { opacity: 1; transform: scale(1); }
+        0%, 71.07% { opacity: 0; transform: scale(0); }
+        71.57%, 100% { opacity: 1; transform: scale(1); }
       }
       .c49 {
         animation: infected49 16000ms linear infinite;
       }
       @keyframes infected49 {
-        0%, 72.06% { fill: var(--c1); }
-        72.16%, 100% { fill: var(--infected); }
+        0%, 71.01% { fill: var(--c1); }
+        71.11%, 100% { fill: var(--infected); }
       }
       .inf49 {
         animation: infection49 16000ms linear infinite;
       }
       @keyframes infection49 {
-        0%, 72.06% { opacity: 0; transform: scale(0); }
-        72.16% { opacity: 0.9; transform: scale(1.5); }
-        73.06% { opacity: 0.6; transform: scale(2.5); }
-        74.06% { opacity: 0; transform: scale(0); }
+        0%, 71.01% { opacity: 0; transform: scale(0); }
+        71.11% { opacity: 0.9; transform: scale(1.5); }
+        72.01% { opacity: 0.6; transform: scale(2.5); }
+        73.01% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull49 {
         animation: skull49 16000ms linear infinite;
       }
       @keyframes skull49 {
-        0%, 73.56% { opacity: 0; transform: scale(0); }
-        74.06%, 100% { opacity: 1; transform: scale(1); }
+        0%, 72.51% { opacity: 0; transform: scale(0); }
+        73.01%, 100% { opacity: 1; transform: scale(1); }
       }
       .c50 {
         animation: infected50 16000ms linear infinite;
       }
       @keyframes infected50 {
-        0%, 73.53% { fill: var(--c1); }
-        73.63%, 100% { fill: var(--infected); }
+        0%, 72.46% { fill: var(--c1); }
+        72.56%, 100% { fill: var(--infected); }
       }
       .inf50 {
         animation: infection50 16000ms linear infinite;
       }
       @keyframes infection50 {
-        0%, 73.53% { opacity: 0; transform: scale(0); }
-        73.63% { opacity: 0.9; transform: scale(1.5); }
-        74.53% { opacity: 0.6; transform: scale(2.5); }
-        75.53% { opacity: 0; transform: scale(0); }
+        0%, 72.46% { opacity: 0; transform: scale(0); }
+        72.56% { opacity: 0.9; transform: scale(1.5); }
+        73.46% { opacity: 0.6; transform: scale(2.5); }
+        74.46% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull50 {
         animation: skull50 16000ms linear infinite;
       }
       @keyframes skull50 {
-        0%, 75.03% { opacity: 0; transform: scale(0); }
-        75.53%, 100% { opacity: 1; transform: scale(1); }
+        0%, 73.96% { opacity: 0; transform: scale(0); }
+        74.46%, 100% { opacity: 1; transform: scale(1); }
       }
       .c51 {
         animation: infected51 16000ms linear infinite;
       }
       @keyframes infected51 {
-        0%, 75.00% { fill: var(--c1); }
-        75.10%, 100% { fill: var(--infected); }
+        0%, 73.91% { fill: var(--c1); }
+        74.01%, 100% { fill: var(--infected); }
       }
       .inf51 {
         animation: infection51 16000ms linear infinite;
       }
       @keyframes infection51 {
-        0%, 75.00% { opacity: 0; transform: scale(0); }
-        75.10% { opacity: 0.9; transform: scale(1.5); }
-        76.00% { opacity: 0.6; transform: scale(2.5); }
-        77.00% { opacity: 0; transform: scale(0); }
+        0%, 73.91% { opacity: 0; transform: scale(0); }
+        74.01% { opacity: 0.9; transform: scale(1.5); }
+        74.91% { opacity: 0.6; transform: scale(2.5); }
+        75.91% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull51 {
         animation: skull51 16000ms linear infinite;
       }
       @keyframes skull51 {
-        0%, 76.50% { opacity: 0; transform: scale(0); }
-        77.00%, 100% { opacity: 1; transform: scale(1); }
+        0%, 75.41% { opacity: 0; transform: scale(0); }
+        75.91%, 100% { opacity: 1; transform: scale(1); }
       }
       .c52 {
         animation: infected52 16000ms linear infinite;
       }
       @keyframes infected52 {
-        0%, 76.47% { fill: var(--c2); }
-        76.57%, 100% { fill: var(--infected); }
+        0%, 75.36% { fill: var(--c2); }
+        75.46%, 100% { fill: var(--infected); }
       }
       .inf52 {
         animation: infection52 16000ms linear infinite;
       }
       @keyframes infection52 {
-        0%, 76.47% { opacity: 0; transform: scale(0); }
-        76.57% { opacity: 0.9; transform: scale(1.5); }
-        77.47% { opacity: 0.6; transform: scale(2.5); }
-        78.47% { opacity: 0; transform: scale(0); }
+        0%, 75.36% { opacity: 0; transform: scale(0); }
+        75.46% { opacity: 0.9; transform: scale(1.5); }
+        76.36% { opacity: 0.6; transform: scale(2.5); }
+        77.36% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull52 {
         animation: skull52 16000ms linear infinite;
       }
       @keyframes skull52 {
-        0%, 77.97% { opacity: 0; transform: scale(0); }
-        78.47%, 100% { opacity: 1; transform: scale(1); }
+        0%, 76.86% { opacity: 0; transform: scale(0); }
+        77.36%, 100% { opacity: 1; transform: scale(1); }
       }
       .c53 {
         animation: infected53 16000ms linear infinite;
       }
       @keyframes infected53 {
-        0%, 77.94% { fill: var(--c1); }
-        78.04%, 100% { fill: var(--infected); }
+        0%, 76.81% { fill: var(--c1); }
+        76.91%, 100% { fill: var(--infected); }
       }
       .inf53 {
         animation: infection53 16000ms linear infinite;
       }
       @keyframes infection53 {
-        0%, 77.94% { opacity: 0; transform: scale(0); }
-        78.04% { opacity: 0.9; transform: scale(1.5); }
-        78.94% { opacity: 0.6; transform: scale(2.5); }
-        79.94% { opacity: 0; transform: scale(0); }
+        0%, 76.81% { opacity: 0; transform: scale(0); }
+        76.91% { opacity: 0.9; transform: scale(1.5); }
+        77.81% { opacity: 0.6; transform: scale(2.5); }
+        78.81% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull53 {
         animation: skull53 16000ms linear infinite;
       }
       @keyframes skull53 {
-        0%, 79.44% { opacity: 0; transform: scale(0); }
-        79.94%, 100% { opacity: 1; transform: scale(1); }
+        0%, 78.31% { opacity: 0; transform: scale(0); }
+        78.81%, 100% { opacity: 1; transform: scale(1); }
       }
       .c54 {
         animation: infected54 16000ms linear infinite;
       }
       @keyframes infected54 {
-        0%, 79.41% { fill: var(--c1); }
-        79.51%, 100% { fill: var(--infected); }
+        0%, 78.26% { fill: var(--c1); }
+        78.36%, 100% { fill: var(--infected); }
       }
       .inf54 {
         animation: infection54 16000ms linear infinite;
       }
       @keyframes infection54 {
-        0%, 79.41% { opacity: 0; transform: scale(0); }
-        79.51% { opacity: 0.9; transform: scale(1.5); }
-        80.41% { opacity: 0.6; transform: scale(2.5); }
-        81.41% { opacity: 0; transform: scale(0); }
+        0%, 78.26% { opacity: 0; transform: scale(0); }
+        78.36% { opacity: 0.9; transform: scale(1.5); }
+        79.26% { opacity: 0.6; transform: scale(2.5); }
+        80.26% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull54 {
         animation: skull54 16000ms linear infinite;
       }
       @keyframes skull54 {
-        0%, 80.91% { opacity: 0; transform: scale(0); }
-        81.41%, 100% { opacity: 1; transform: scale(1); }
+        0%, 79.76% { opacity: 0; transform: scale(0); }
+        80.26%, 100% { opacity: 1; transform: scale(1); }
       }
       .c55 {
         animation: infected55 16000ms linear infinite;
       }
       @keyframes infected55 {
-        0%, 85.29% { fill: var(--c1); }
-        85.39%, 100% { fill: var(--infected); }
+        0%, 84.06% { fill: var(--c1); }
+        84.16%, 100% { fill: var(--infected); }
       }
       .inf55 {
         animation: infection55 16000ms linear infinite;
       }
       @keyframes infection55 {
-        0%, 85.29% { opacity: 0; transform: scale(0); }
-        85.39% { opacity: 0.9; transform: scale(1.5); }
-        86.29% { opacity: 0.6; transform: scale(2.5); }
-        87.29% { opacity: 0; transform: scale(0); }
+        0%, 84.06% { opacity: 0; transform: scale(0); }
+        84.16% { opacity: 0.9; transform: scale(1.5); }
+        85.06% { opacity: 0.6; transform: scale(2.5); }
+        86.06% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull55 {
         animation: skull55 16000ms linear infinite;
       }
       @keyframes skull55 {
-        0%, 86.79% { opacity: 0; transform: scale(0); }
-        87.29%, 100% { opacity: 1; transform: scale(1); }
+        0%, 85.56% { opacity: 0; transform: scale(0); }
+        86.06%, 100% { opacity: 1; transform: scale(1); }
       }
       .c56 {
         animation: infected56 16000ms linear infinite;
       }
       @keyframes infected56 {
-        0%, 83.82% { fill: var(--c4); }
-        83.92%, 100% { fill: var(--infected); }
+        0%, 82.61% { fill: var(--c4); }
+        82.71%, 100% { fill: var(--infected); }
       }
       .inf56 {
         animation: infection56 16000ms linear infinite;
       }
       @keyframes infection56 {
-        0%, 83.82% { opacity: 0; transform: scale(0); }
-        83.92% { opacity: 0.9; transform: scale(1.5); }
-        84.82% { opacity: 0.6; transform: scale(2.5); }
-        85.82% { opacity: 0; transform: scale(0); }
+        0%, 82.61% { opacity: 0; transform: scale(0); }
+        82.71% { opacity: 0.9; transform: scale(1.5); }
+        83.61% { opacity: 0.6; transform: scale(2.5); }
+        84.61% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull56 {
         animation: skull56 16000ms linear infinite;
       }
       @keyframes skull56 {
-        0%, 85.32% { opacity: 0; transform: scale(0); }
-        85.82%, 100% { opacity: 1; transform: scale(1); }
+        0%, 84.11% { opacity: 0; transform: scale(0); }
+        84.61%, 100% { opacity: 1; transform: scale(1); }
       }
       .c57 {
         animation: infected57 16000ms linear infinite;
       }
       @keyframes infected57 {
-        0%, 82.35% { fill: var(--c3); }
-        82.45%, 100% { fill: var(--infected); }
+        0%, 81.16% { fill: var(--c3); }
+        81.26%, 100% { fill: var(--infected); }
       }
       .inf57 {
         animation: infection57 16000ms linear infinite;
       }
       @keyframes infection57 {
-        0%, 82.35% { opacity: 0; transform: scale(0); }
-        82.45% { opacity: 0.9; transform: scale(1.5); }
-        83.35% { opacity: 0.6; transform: scale(2.5); }
-        84.35% { opacity: 0; transform: scale(0); }
+        0%, 81.16% { opacity: 0; transform: scale(0); }
+        81.26% { opacity: 0.9; transform: scale(1.5); }
+        82.16% { opacity: 0.6; transform: scale(2.5); }
+        83.16% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull57 {
         animation: skull57 16000ms linear infinite;
       }
       @keyframes skull57 {
-        0%, 83.85% { opacity: 0; transform: scale(0); }
-        84.35%, 100% { opacity: 1; transform: scale(1); }
+        0%, 82.66% { opacity: 0; transform: scale(0); }
+        83.16%, 100% { opacity: 1; transform: scale(1); }
       }
       .c58 {
         animation: infected58 16000ms linear infinite;
       }
       @keyframes infected58 {
-        0%, 80.88% { fill: var(--c1); }
-        80.98%, 100% { fill: var(--infected); }
+        0%, 79.71% { fill: var(--c1); }
+        79.81%, 100% { fill: var(--infected); }
       }
       .inf58 {
         animation: infection58 16000ms linear infinite;
       }
       @keyframes infection58 {
-        0%, 80.88% { opacity: 0; transform: scale(0); }
-        80.98% { opacity: 0.9; transform: scale(1.5); }
-        81.88% { opacity: 0.6; transform: scale(2.5); }
-        82.88% { opacity: 0; transform: scale(0); }
+        0%, 79.71% { opacity: 0; transform: scale(0); }
+        79.81% { opacity: 0.9; transform: scale(1.5); }
+        80.71% { opacity: 0.6; transform: scale(2.5); }
+        81.71% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull58 {
         animation: skull58 16000ms linear infinite;
       }
       @keyframes skull58 {
-        0%, 82.38% { opacity: 0; transform: scale(0); }
-        82.88%, 100% { opacity: 1; transform: scale(1); }
+        0%, 81.21% { opacity: 0; transform: scale(0); }
+        81.71%, 100% { opacity: 1; transform: scale(1); }
       }
       .c59 {
         animation: infected59 16000ms linear infinite;
       }
       @keyframes infected59 {
-        0%, 86.76% { fill: var(--c1); }
-        86.86%, 100% { fill: var(--infected); }
+        0%, 85.51% { fill: var(--c1); }
+        85.61%, 100% { fill: var(--infected); }
       }
       .inf59 {
         animation: infection59 16000ms linear infinite;
       }
       @keyframes infection59 {
-        0%, 86.76% { opacity: 0; transform: scale(0); }
-        86.86% { opacity: 0.9; transform: scale(1.5); }
-        87.76% { opacity: 0.6; transform: scale(2.5); }
-        88.76% { opacity: 0; transform: scale(0); }
+        0%, 85.51% { opacity: 0; transform: scale(0); }
+        85.61% { opacity: 0.9; transform: scale(1.5); }
+        86.51% { opacity: 0.6; transform: scale(2.5); }
+        87.51% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull59 {
         animation: skull59 16000ms linear infinite;
       }
       @keyframes skull59 {
-        0%, 88.26% { opacity: 0; transform: scale(0); }
-        88.76%, 100% { opacity: 1; transform: scale(1); }
+        0%, 87.01% { opacity: 0; transform: scale(0); }
+        87.51%, 100% { opacity: 1; transform: scale(1); }
       }
       .c60 {
         animation: infected60 16000ms linear infinite;
       }
       @keyframes infected60 {
-        0%, 88.24% { fill: var(--c1); }
-        88.34%, 100% { fill: var(--infected); }
+        0%, 86.96% { fill: var(--c1); }
+        87.06%, 100% { fill: var(--infected); }
       }
       .inf60 {
         animation: infection60 16000ms linear infinite;
       }
       @keyframes infection60 {
-        0%, 88.24% { opacity: 0; transform: scale(0); }
-        88.34% { opacity: 0.9; transform: scale(1.5); }
-        89.24% { opacity: 0.6; transform: scale(2.5); }
-        90.24% { opacity: 0; transform: scale(0); }
+        0%, 86.96% { opacity: 0; transform: scale(0); }
+        87.06% { opacity: 0.9; transform: scale(1.5); }
+        87.96% { opacity: 0.6; transform: scale(2.5); }
+        88.96% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull60 {
         animation: skull60 16000ms linear infinite;
       }
       @keyframes skull60 {
-        0%, 89.74% { opacity: 0; transform: scale(0); }
-        90.24%, 100% { opacity: 1; transform: scale(1); }
+        0%, 88.46% { opacity: 0; transform: scale(0); }
+        88.96%, 100% { opacity: 1; transform: scale(1); }
       }
       .c61 {
         animation: infected61 16000ms linear infinite;
       }
       @keyframes infected61 {
-        0%, 89.71% { fill: var(--c1); }
-        89.81%, 100% { fill: var(--infected); }
+        0%, 88.41% { fill: var(--c1); }
+        88.51%, 100% { fill: var(--infected); }
       }
       .inf61 {
         animation: infection61 16000ms linear infinite;
       }
       @keyframes infection61 {
-        0%, 89.71% { opacity: 0; transform: scale(0); }
-        89.81% { opacity: 0.9; transform: scale(1.5); }
-        90.71% { opacity: 0.6; transform: scale(2.5); }
-        91.71% { opacity: 0; transform: scale(0); }
+        0%, 88.41% { opacity: 0; transform: scale(0); }
+        88.51% { opacity: 0.9; transform: scale(1.5); }
+        89.41% { opacity: 0.6; transform: scale(2.5); }
+        90.41% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull61 {
         animation: skull61 16000ms linear infinite;
       }
       @keyframes skull61 {
-        0%, 91.21% { opacity: 0; transform: scale(0); }
-        91.71%, 100% { opacity: 1; transform: scale(1); }
+        0%, 89.91% { opacity: 0; transform: scale(0); }
+        90.41%, 100% { opacity: 1; transform: scale(1); }
       }
       .c62 {
         animation: infected62 16000ms linear infinite;
       }
       @keyframes infected62 {
-        0%, 94.12% { fill: var(--c1); }
-        94.22%, 100% { fill: var(--infected); }
+        0%, 92.75% { fill: var(--c1); }
+        92.85%, 100% { fill: var(--infected); }
       }
       .inf62 {
         animation: infection62 16000ms linear infinite;
       }
       @keyframes infection62 {
-        0%, 94.12% { opacity: 0; transform: scale(0); }
-        94.22% { opacity: 0.9; transform: scale(1.5); }
-        95.12% { opacity: 0.6; transform: scale(2.5); }
-        96.12% { opacity: 0; transform: scale(0); }
+        0%, 92.75% { opacity: 0; transform: scale(0); }
+        92.85% { opacity: 0.9; transform: scale(1.5); }
+        93.75% { opacity: 0.6; transform: scale(2.5); }
+        94.75% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull62 {
         animation: skull62 16000ms linear infinite;
       }
       @keyframes skull62 {
-        0%, 95.62% { opacity: 0; transform: scale(0); }
-        96.12%, 100% { opacity: 1; transform: scale(1); }
+        0%, 94.25% { opacity: 0; transform: scale(0); }
+        94.75%, 100% { opacity: 1; transform: scale(1); }
       }
       .c63 {
         animation: infected63 16000ms linear infinite;
       }
       @keyframes infected63 {
-        0%, 92.65% { fill: var(--c2); }
-        92.75%, 100% { fill: var(--infected); }
+        0%, 91.30% { fill: var(--c2); }
+        91.40%, 100% { fill: var(--infected); }
       }
       .inf63 {
         animation: infection63 16000ms linear infinite;
       }
       @keyframes infection63 {
-        0%, 92.65% { opacity: 0; transform: scale(0); }
-        92.75% { opacity: 0.9; transform: scale(1.5); }
-        93.65% { opacity: 0.6; transform: scale(2.5); }
-        94.65% { opacity: 0; transform: scale(0); }
+        0%, 91.30% { opacity: 0; transform: scale(0); }
+        91.40% { opacity: 0.9; transform: scale(1.5); }
+        92.30% { opacity: 0.6; transform: scale(2.5); }
+        93.30% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull63 {
         animation: skull63 16000ms linear infinite;
       }
       @keyframes skull63 {
-        0%, 94.15% { opacity: 0; transform: scale(0); }
-        94.65%, 100% { opacity: 1; transform: scale(1); }
+        0%, 92.80% { opacity: 0; transform: scale(0); }
+        93.30%, 100% { opacity: 1; transform: scale(1); }
       }
       .c64 {
         animation: infected64 16000ms linear infinite;
       }
       @keyframes infected64 {
-        0%, 91.18% { fill: var(--c1); }
-        91.28%, 100% { fill: var(--infected); }
+        0%, 89.86% { fill: var(--c1); }
+        89.96%, 100% { fill: var(--infected); }
       }
       .inf64 {
         animation: infection64 16000ms linear infinite;
       }
       @keyframes infection64 {
-        0%, 91.18% { opacity: 0; transform: scale(0); }
-        91.28% { opacity: 0.9; transform: scale(1.5); }
-        92.18% { opacity: 0.6; transform: scale(2.5); }
-        93.18% { opacity: 0; transform: scale(0); }
+        0%, 89.86% { opacity: 0; transform: scale(0); }
+        89.96% { opacity: 0.9; transform: scale(1.5); }
+        90.86% { opacity: 0.6; transform: scale(2.5); }
+        91.86% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull64 {
         animation: skull64 16000ms linear infinite;
       }
       @keyframes skull64 {
-        0%, 92.68% { opacity: 0; transform: scale(0); }
-        93.18%, 100% { opacity: 1; transform: scale(1); }
+        0%, 91.36% { opacity: 0; transform: scale(0); }
+        91.86%, 100% { opacity: 1; transform: scale(1); }
       }
       .c65 {
         animation: infected65 16000ms linear infinite;
       }
       @keyframes infected65 {
-        0%, 95.59% { fill: var(--c1); }
-        95.69%, 100% { fill: var(--infected); }
+        0%, 94.20% { fill: var(--c1); }
+        94.30%, 100% { fill: var(--infected); }
       }
       .inf65 {
         animation: infection65 16000ms linear infinite;
       }
       @keyframes infection65 {
-        0%, 95.59% { opacity: 0; transform: scale(0); }
-        95.69% { opacity: 0.9; transform: scale(1.5); }
-        96.59% { opacity: 0.6; transform: scale(2.5); }
-        97.59% { opacity: 0; transform: scale(0); }
+        0%, 94.20% { opacity: 0; transform: scale(0); }
+        94.30% { opacity: 0.9; transform: scale(1.5); }
+        95.20% { opacity: 0.6; transform: scale(2.5); }
+        96.20% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull65 {
         animation: skull65 16000ms linear infinite;
       }
       @keyframes skull65 {
-        0%, 97.09% { opacity: 0; transform: scale(0); }
-        97.59%, 100% { opacity: 1; transform: scale(1); }
+        0%, 95.70% { opacity: 0; transform: scale(0); }
+        96.20%, 100% { opacity: 1; transform: scale(1); }
       }
       .c66 {
         animation: infected66 16000ms linear infinite;
       }
       @keyframes infected66 {
-        0%, 97.06% { fill: var(--c1); }
-        97.16%, 100% { fill: var(--infected); }
+        0%, 95.65% { fill: var(--c1); }
+        95.75%, 100% { fill: var(--infected); }
       }
       .inf66 {
         animation: infection66 16000ms linear infinite;
       }
       @keyframes infection66 {
-        0%, 97.06% { opacity: 0; transform: scale(0); }
-        97.16% { opacity: 0.9; transform: scale(1.5); }
-        98.06% { opacity: 0.6; transform: scale(2.5); }
-        99.06% { opacity: 0; transform: scale(0); }
+        0%, 95.65% { opacity: 0; transform: scale(0); }
+        95.75% { opacity: 0.9; transform: scale(1.5); }
+        96.65% { opacity: 0.6; transform: scale(2.5); }
+        97.65% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull66 {
         animation: skull66 16000ms linear infinite;
       }
       @keyframes skull66 {
-        0%, 98.56% { opacity: 0; transform: scale(0); }
-        99.06%, 100% { opacity: 1; transform: scale(1); }
+        0%, 97.15% { opacity: 0; transform: scale(0); }
+        97.65%, 100% { opacity: 1; transform: scale(1); }
       }
       .c67 {
         animation: infected67 16000ms linear infinite;
       }
       @keyframes infected67 {
-        0%, 98.53% { fill: var(--c3); }
-        98.63%, 100% { fill: var(--infected); }
+        0%, 97.10% { fill: var(--c3); }
+        97.20%, 100% { fill: var(--infected); }
       }
       .inf67 {
         animation: infection67 16000ms linear infinite;
       }
       @keyframes infection67 {
-        0%, 98.53% { opacity: 0; transform: scale(0); }
-        98.63% { opacity: 0.9; transform: scale(1.5); }
-        99.53% { opacity: 0.6; transform: scale(2.5); }
-        100.53% { opacity: 0; transform: scale(0); }
+        0%, 97.10% { opacity: 0; transform: scale(0); }
+        97.20% { opacity: 0.9; transform: scale(1.5); }
+        98.10% { opacity: 0.6; transform: scale(2.5); }
+        99.10% { opacity: 0; transform: scale(0); }
         100% { opacity: 0; transform: scale(0); }
       }
       .skull67 {
         animation: skull67 16000ms linear infinite;
       }
       @keyframes skull67 {
-        0%, 100.03% { opacity: 0; transform: scale(0); }
-        100.53%, 100% { opacity: 1; transform: scale(1); }
+        0%, 98.60% { opacity: 0; transform: scale(0); }
+        99.10%, 100% { opacity: 1; transform: scale(1); }
+      }
+      .c68 {
+        animation: infected68 16000ms linear infinite;
+      }
+      @keyframes infected68 {
+        0%, 98.55% { fill: var(--c1); }
+        98.65%, 100% { fill: var(--infected); }
+      }
+      .inf68 {
+        animation: infection68 16000ms linear infinite;
+      }
+      @keyframes infection68 {
+        0%, 98.55% { opacity: 0; transform: scale(0); }
+        98.65% { opacity: 0.9; transform: scale(1.5); }
+        99.55% { opacity: 0.6; transform: scale(2.5); }
+        100.55% { opacity: 0; transform: scale(0); }
+        100% { opacity: 0; transform: scale(0); }
+      }
+      .skull68 {
+        animation: skull68 16000ms linear infinite;
+      }
+      @keyframes skull68 {
+        0%, 100.05% { opacity: 0; transform: scale(0); }
+        100.55%, 100% { opacity: 1; transform: scale(1); }
       }
       
       @keyframes zombieMove {
-        0.00% { transform: translate(36px, 24px); } 1.49% { transform: translate(36px, 36px); } 2.99% { transform: translate(36px, 48px); } 4.48% { transform: translate(36px, 60px); } 5.97% { transform: translate(36px, 72px); } 7.46% { transform: translate(48px, 60px); } 8.96% { transform: translate(48px, 48px); } 10.45% { transform: translate(48px, 36px); } 11.94% { transform: translate(48px, 24px); } 13.43% { transform: translate(48px, 12px); } 14.93% { transform: translate(48px, 0px); } 16.42% { transform: translate(72px, 0px); } 17.91% { transform: translate(72px, 12px); } 19.40% { transform: translate(84px, 72px); } 20.90% { transform: translate(84px, 48px); } 22.39% { transform: translate(84px, 36px); } 23.88% { transform: translate(96px, 0px); } 25.37% { transform: translate(96px, 12px); } 26.87% { transform: translate(132px, 72px); } 28.36% { transform: translate(144px, 0px); } 29.85% { transform: translate(144px, 12px); } 31.34% { transform: translate(156px, 60px); } 32.84% { transform: translate(180px, 12px); } 34.33% { transform: translate(180px, 24px); } 35.82% { transform: translate(180px, 72px); } 37.31% { transform: translate(192px, 12px); } 38.81% { transform: translate(192px, 0px); } 40.30% { transform: translate(360px, 72px); } 41.79% { transform: translate(372px, 60px); } 43.28% { transform: translate(384px, 12px); } 44.78% { transform: translate(384px, 24px); } 46.27% { transform: translate(396px, 72px); } 47.76% { transform: translate(396px, 0px); } 49.25% { transform: translate(408px, 12px); } 50.75% { transform: translate(408px, 36px); } 52.24% { transform: translate(408px, 48px); } 53.73% { transform: translate(408px, 60px); } 55.22% { transform: translate(420px, 0px); } 56.72% { transform: translate(444px, 24px); } 58.21% { transform: translate(444px, 36px); } 59.70% { transform: translate(444px, 60px); } 61.19% { transform: translate(444px, 72px); } 62.69% { transform: translate(456px, 72px); } 64.18% { transform: translate(456px, 0px); } 65.67% { transform: translate(468px, 60px); } 67.16% { transform: translate(480px, 60px); } 68.66% { transform: translate(480px, 48px); } 70.15% { transform: translate(480px, 36px); } 71.64% { transform: translate(528px, 0px); } 73.13% { transform: translate(528px, 12px); } 74.63% { transform: translate(528px, 24px); } 76.12% { transform: translate(528px, 36px); } 77.61% { transform: translate(528px, 48px); } 79.10% { transform: translate(528px, 60px); } 80.60% { transform: translate(528px, 72px); } 82.09% { transform: translate(540px, 36px); } 83.58% { transform: translate(540px, 24px); } 85.07% { transform: translate(540px, 12px); } 86.57% { transform: translate(540px, 0px); } 88.06% { transform: translate(552px, 24px); } 89.55% { transform: translate(564px, 60px); } 91.04% { transform: translate(576px, 48px); } 92.54% { transform: translate(588px, 60px); } 94.03% { transform: translate(588px, 48px); } 95.52% { transform: translate(588px, 36px); } 97.01% { transform: translate(600px, 24px); } 98.51% { transform: translate(612px, 48px); } 100.00% { transform: translate(624px, 24px); }
+        0.00% { transform: translate(36px, 24px); } 1.47% { transform: translate(36px, 36px); } 2.94% { transform: translate(36px, 48px); } 4.41% { transform: translate(36px, 60px); } 5.88% { transform: translate(36px, 72px); } 7.35% { transform: translate(48px, 60px); } 8.82% { transform: translate(48px, 48px); } 10.29% { transform: translate(48px, 36px); } 11.76% { transform: translate(48px, 24px); } 13.24% { transform: translate(48px, 12px); } 14.71% { transform: translate(48px, 0px); } 16.18% { transform: translate(72px, 0px); } 17.65% { transform: translate(72px, 12px); } 19.12% { transform: translate(84px, 72px); } 20.59% { transform: translate(84px, 48px); } 22.06% { transform: translate(84px, 36px); } 23.53% { transform: translate(96px, 0px); } 25.00% { transform: translate(96px, 12px); } 26.47% { transform: translate(132px, 72px); } 27.94% { transform: translate(144px, 0px); } 29.41% { transform: translate(144px, 12px); } 30.88% { transform: translate(156px, 60px); } 32.35% { transform: translate(180px, 12px); } 33.82% { transform: translate(180px, 24px); } 35.29% { transform: translate(180px, 72px); } 36.76% { transform: translate(192px, 12px); } 38.24% { transform: translate(192px, 0px); } 39.71% { transform: translate(360px, 72px); } 41.18% { transform: translate(372px, 60px); } 42.65% { transform: translate(384px, 12px); } 44.12% { transform: translate(384px, 24px); } 45.59% { transform: translate(396px, 72px); } 47.06% { transform: translate(396px, 0px); } 48.53% { transform: translate(408px, 12px); } 50.00% { transform: translate(408px, 36px); } 51.47% { transform: translate(408px, 48px); } 52.94% { transform: translate(408px, 60px); } 54.41% { transform: translate(420px, 0px); } 55.88% { transform: translate(444px, 24px); } 57.35% { transform: translate(444px, 36px); } 58.82% { transform: translate(444px, 60px); } 60.29% { transform: translate(444px, 72px); } 61.76% { transform: translate(456px, 72px); } 63.24% { transform: translate(456px, 0px); } 64.71% { transform: translate(468px, 60px); } 66.18% { transform: translate(480px, 60px); } 67.65% { transform: translate(480px, 48px); } 69.12% { transform: translate(480px, 36px); } 70.59% { transform: translate(528px, 0px); } 72.06% { transform: translate(528px, 12px); } 73.53% { transform: translate(528px, 24px); } 75.00% { transform: translate(528px, 36px); } 76.47% { transform: translate(528px, 48px); } 77.94% { transform: translate(528px, 60px); } 79.41% { transform: translate(528px, 72px); } 80.88% { transform: translate(540px, 36px); } 82.35% { transform: translate(540px, 24px); } 83.82% { transform: translate(540px, 12px); } 85.29% { transform: translate(540px, 0px); } 86.76% { transform: translate(552px, 24px); } 88.24% { transform: translate(564px, 60px); } 89.71% { transform: translate(576px, 48px); } 91.18% { transform: translate(588px, 60px); } 92.65% { transform: translate(588px, 48px); } 94.12% { transform: translate(588px, 36px); } 95.59% { transform: translate(600px, 24px); } 97.06% { transform: translate(612px, 48px); } 98.53% { transform: translate(624px, 24px); } 100.00% { transform: translate(624px, 36px); }
       }
     </style>
   </defs>
@@ -5374,14 +5398,25 @@
           dominant-baseline="middle"
           font-size="8"
           opacity="0">💀</text>
-    <rect class="c " 
+    <rect class="c c68" 
           x="625" 
           y="37" 
           width="10" 
           height="10" 
           rx="2" 
           ry="2"
-          style="fill: var(--ce)"/>
+          style="fill: var(--c1)"/>
+    <circle class="infection inf68"
+            cx="630"
+            cy="42"
+            r="4"/>
+    <text class="skull skull68"
+          x="630"
+          y="43"
+          text-anchor="middle"
+          dominant-baseline="middle"
+          font-size="8"
+          opacity="0">💀</text>
     <!-- Zombie -->
     <text class="zombie" x="42" y="30">🧟‍♂️</text>
   </g>
