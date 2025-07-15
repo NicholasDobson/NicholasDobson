@@ -1,0 +1,46 @@
+name: Deploy Zombie Hacker Contributions
+
+on:
+  # run automatically every 12 hours
+  schedule:
+    - cron: "0 */12 * * *"
+  
+  # allows to manually run the job at any time
+  workflow_dispatch:
+  
+  # run on every push on the main branch
+  push:
+    branches:
+    - main
+
+jobs:
+  deploy:
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: Checkout repository 
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Fetch GitHub contributions data 🧟‍♂️
+        env:
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+        run: |
+          echo "🧟‍♂️ Zombie Hacker initiating GitHub infiltration..."
+          node scripts/fetchContributions.js
+
+      - name: Deploy to GitHub Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          cname: # Add your custom domain if you have one

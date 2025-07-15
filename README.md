@@ -88,3 +88,16 @@
   <!-- SAS doesn't exist on skillicons.dev, so you can leave it out or mention it in text -->
 </div>
 
+
+<!-- 🧟‍♂️ Zombie Hacker Contributions Infiltration -->
+<div align="center">
+  <h2>🧟‍♂️ ZOMBIE HACKER INFILTRATING GITHUB MATRIX 🧟‍♂️</h2>
+  
+  <!-- Embedded Zombie Hacker Visualization -->
+  <a href="https://nicholasdobson.github.io/NicholasDobson/">
+    <img width="800" src="https://via.placeholder.com/800x300/0a0a0a/00ff00?text=🧟‍♂️+CLICK+TO+WATCH+ZOMBIE+HACK+MY+CONTRIBUTIONS+🧟‍♂️" alt="Zombie Hacker Infiltrating GitHub Contributions Matrix">
+  </a>
+  
+  <p><em>🔥 Interactive zombie hacker visualization of my GitHub contributions!</em></p>
+  <p><strong><a href="https://nicholasdobson.github.io/NicholasDobson/">🚀 Click here to watch the full zombie apocalypse simulation!</a></strong></p>
+</div>

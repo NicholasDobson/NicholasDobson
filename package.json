@@ -1,0 +1,8 @@
+{
+  "name": "zombie-hacker-visualizer",
+  "scripts": {
+    "start": "node scripts/fetchContributions.js",
+    "hack": "node scripts/fetchContributions.js && echo 🧟‍♂️ Ready to hack! Open public/index.html in your browser"
+  },
+  "type": "module"
+}
