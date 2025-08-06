@@ -15,7 +15,7 @@ function loadEnvFile() {
                 process.env[key.trim()] = value.trim().replace(/^["']|["']$/g, '');
             }
         });
-        console.log('✅ Loaded environment variables from .env file');
+        console.log('Loaded environment variables from .env file');
     }
 }
 
@@ -410,7 +410,7 @@ async function fetchGitHubContributions(username = 'NicholasDobson') {
             return null;
         }
         
-        console.log('✅ Successfully received GitHub API response!');
+        console.log('Successfully received GitHub API response!');
         
         // Convert to Platane/snk format using EXACT same logic
         const contributionData = data.user.contributionsCollection.contributionCalendar.weeks.flatMap(
@@ -518,3 +518,4 @@ console.log(`
 `);
 
 generateZombieAnimation();
+
