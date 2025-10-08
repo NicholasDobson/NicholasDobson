@@ -35,7 +35,7 @@
 
 <hr/>
 
-<h2 align="center">🛠️ Languages · Frameworks · Tools</h2>
+<h2 align="center">🛠️ Languages · Frameworks · Tools </h2>
 <br/>
 
 <h3 align="center">💻 Frontend</h3>
@@ -45,7 +45,7 @@
   </a>
 </div>
 
-<h3 align="center">⚙️ DevOps & Tools</h3>
+<h3 align="center">⚙️ DevOps & Tools </h3>
 <div align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=git,githubactions,docker,vim,linux,bash,aws,postman,powershell,regex,npm,vscode,windows,ubuntu,nextjs" />
@@ -88,6 +88,16 @@
   <!-- SAS doesn't exist on skillicons.dev, so you can leave it out or mention it in text -->
 </div>
 
+---
+
+## Featured Project
+
+| Project | Overview | Link | Technologies |
+|:------:|:--------|:----:|:-----------|
+| ![Traffic Guardian Logo](https://github.com/COS301-SE-2025/Traffic-Guardian/blob/main/assets/TrafficGuardianLogo1_LightFinal.PNG?raw=true) | AWS-based system for real-time traffic monitoring and AI-driven incident detection. | [GitHub Repo](https://github.com/yourusername/traffic-guardian) | Python, GitHub Actions, PostgreSQL, Real-Time APIs, AWS... |
+
+---
+
 
 <!-- 🧟‍♂️ Zombie GitHub Infiltration -->
 <div align="center">
@@ -112,3 +122,19 @@
   
   </details>
 </div>
+
+<hr/>
+
+<br>
+<div align="center">
+  <img width=390 src="https://github-readme-stats.vercel.app/api?username=NicholasDobson&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10" alt="stats"/>
+</div>
+
+
+
+
+
+
+
+
+
