@@ -15,7 +15,7 @@ function loadEnvFile() {
                 process.env[key.trim()] = value.trim().replace(/^["']|["']$/g, '');
             }
         });
-        console.log('✅ Loaded environment variables from .env file');
+        console.log('Loaded environment variables from .env file');
     }
 }
 
@@ -353,13 +353,13 @@ async function fetchGitHubContributions(username = 'NicholasDobson') {
         const token = process.env.GITHUB_TOKEN || process.env.TOKEN;
         
         if (!token) {
-            console.warn('🔑 No GitHub token found in environment variables');
+            console.warn('No GitHub token found in environment variables');
             console.warn('   For GitHub Actions: TOKEN secret should be set');
             console.warn('   For local development: Add GITHUB_TOKEN=your_token to .env file');
             return null;
         }
         
-        console.log(`📊 Fetching real GitHub contributions for ${username} (using Platane/snk method)...`);
+        console.log(`Fetching real GitHub contributions for ${username} (using Platane/snk method)...`);
         
         // Use EXACT same GraphQL query as Platane/snk packages/github-user-contribution/index.ts
         const query = `
@@ -380,7 +380,7 @@ async function fetchGitHubContributions(username = 'NicholasDobson') {
           }
         }`;
         
-        console.log('🌐 Making GitHub GraphQL API request...');
+        console.log('Making GitHub GraphQL API request...');
         
         const response = await fetch('https://api.github.com/graphql', {
             method: 'POST',
@@ -395,22 +395,22 @@ async function fetchGitHubContributions(username = 'NicholasDobson') {
             })
         });
         
-        console.log(`📡 Response status: ${response.status} ${response.statusText}`);
+        console.log(`Response status: ${response.status} ${response.statusText}`);
         
         if (!response.ok) {
             const errorText = await response.text();
-            console.error(`❌ GitHub API error response: ${errorText}`);
+            console.error(`GitHub API error response: ${errorText}`);
             throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
         }
         
         const { data, errors } = await response.json();
         
         if (errors?.[0]) {
-            console.warn('⚠️ GitHub API errors:', errors);
+            console.warn('GitHub API errors:', errors);
             return null;
         }
         
-        console.log('✅ Successfully received GitHub API response!');
+        console.log('Successfully received GitHub API response!');
         
         // Convert to Platane/snk format using EXACT same logic
         const contributionData = data.user.contributionsCollection.contributionCalendar.weeks.flatMap(
@@ -432,21 +432,21 @@ async function fetchGitHubContributions(username = 'NicholasDobson') {
                 }))
         );
         
-        console.log(`✅ Fetched ${contributionData.length} contribution cells using Platane/snk format`);
-        console.log(`📅 Date range: ${contributionData[0]?.date} to ${contributionData[contributionData.length - 1]?.date}`);
-        console.log(`🎯 Active cells (level > 0): ${contributionData.filter(c => c.level > 0).length}`);
+        console.log(`Fetched ${contributionData.length} contribution cells using Platane/snk format`);
+        console.log(`Date range: ${contributionData[0]?.date} to ${contributionData[contributionData.length - 1]?.date}`);
+        console.log(`Active cells (level > 0): ${contributionData.filter(c => c.level > 0).length}`);
         
         return contributionData;
         
     } catch (error) {
         if (error.message.includes('401')) {
-            console.warn('🔑 GitHub API authentication failed. To get your real contributions:');
+            console.warn('GitHub API authentication failed. To get your real contributions:');
             console.warn('   1. Create a GitHub Personal Access Token at: https://github.com/settings/tokens');
             console.warn('   3. See GITHUB_TOKEN_SETUP.md for detailed instructions');
         } else {
-            console.warn('⚠️ Failed to fetch GitHub contributions:', error.message);
+            console.warn('Failed to fetch GitHub contributions:', error.message);
         }
-        console.log('🔄 Will fall back to sample data...');
+        console.log('Will fall back to sample data...');
         return null;
     }
 }
@@ -465,9 +465,9 @@ async function generateZombieAnimation() {
             if (fs.existsSync(dataPath)) {
                 const rawData = fs.readFileSync(dataPath, 'utf8');
                 contributionData = JSON.parse(rawData);
-                console.log(`📊 Loaded ${contributionData.length} contribution data points from data.json`);
+                console.log(`Loaded ${contributionData.length} contribution data points from data.json`);
             } else {
-                console.log('⚠️ No GitHub token and no data.json found, generating sample data...');
+                console.log('No GitHub token and no data.json found, generating sample data...');
                 // Generate sample data using Platane/snk format
                 contributionData = [];
                 for (let x = 0; x < GRID_WIDTH; x++) {
@@ -486,7 +486,7 @@ async function generateZombieAnimation() {
                         });
                     }
                 }
-                console.log('📊 Generated sample contribution data with Platane/snk format');
+                console.log('Generated sample contribution data with Platane/snk format');
             }
         }
         
@@ -500,11 +500,11 @@ async function generateZombieAnimation() {
         const zombieSVG = await createZombieContributionSVG(contributionData);
         fs.writeFileSync(path.join(outputDir, 'zombie-github.svg'), zombieSVG);
         
-        console.log('✅ Zombie animation generated successfully!');
-        console.log('📁 File created: dist/zombie-github.svg');
+        console.log('Zombie animation generated successfully!');
+        console.log('File created: dist/zombie-github.svg');
         
     } catch (error) {
-        console.error('💥 Error generating zombie animation:', error);
+        console.error('Error generating zombie animation:', error);
         process.exit(1);
     }
 }
