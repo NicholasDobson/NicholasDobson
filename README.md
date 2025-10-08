@@ -90,7 +90,7 @@
 
 
 ---
-
+<h2 align="center">🚀 Featured Project</h2>
 | Project | Overview | Link | Technologies |
 |----------|-----------|------|---------------|
 | ![Traffic Guardian Logo](https://github.com/COS301-SE-2025/Traffic-Guardian/blob/main/assets/TrafficGuardianLogo1_LightFinal.PNG?raw=true) | AWS-based system for real-time traffic monitoring and AI-driven incident detection. | [GitHub Repo](https://github.com/yourusername/traffic-guardian) | Python, GitHub Actions, PostgreSQL, Real-Time APIs, AWS |
@@ -128,6 +128,7 @@
 <div align="center">
   <img width=390 src="https://github-readme-stats.vercel.app/api?username=NicholasDobson&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10" alt="stats"/>
 </div>
+
 
 
 
