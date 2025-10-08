@@ -23,15 +23,15 @@ jobs:
     timeout-minutes: 5
     
     steps:
-      - name: Checkout repository 🔄
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 🟢
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Install dependencies 📦
+      - name: Install dependencies
         run: npm install
 
       - name: Generate zombie GitHub animation 🧟‍♂️
@@ -42,7 +42,7 @@ jobs:
           echo "Using custom token for real contribution data..."
           node scripts/zombieSnk.js
       
-      - name: Push zombie animation to output branch 🚀
+      - name: Push zombie animation to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
