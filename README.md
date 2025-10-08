@@ -87,11 +87,27 @@
   </a>
   <!-- SAS doesn't exist on skillicons.dev, so you can leave it out or mention it in text -->
 </div>
-<div align="center">
-| Project | Overview | Link | Technologies |
-|----------|-----------|------|---------------|
-| ![Traffic Guardian Logo](https://github.com/COS301-SE-2025/Traffic-Guardian/blob/main/assets/TrafficGuardianLogo1_LightFinal.PNG?raw=true) | AWS-based system for real-time traffic monitoring and AI-driven incident detection. | [GitHub Repo](https://github.com/yourusername/traffic-guardian) | Python, GitHub Actions, PostgreSQL, Real-Time APIs, AWS |
-</div>
+
+
+---
+
+<h2 align="center">🚀 Featured Project</h2>
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/COS301-SE-2025/Traffic-Guardian/blob/main/assets/TrafficGuardianLogo1_LightFinal.PNG?raw=true" width="150" alt="Traffic Guardian Logo"/><br>
+      <strong>Traffic Guardian</strong>
+    </td>
+    <td>
+      <p>AWS-based system for real-time traffic monitoring and AI-driven incident detection.</p>
+      <p><a href="https://github.com/yourusername/traffic-guardian">GitHub Repo</a></p>
+      <p><strong>Technologies:</strong> Python, GitHub Actions, PostgreSQL, Real-Time APIs, AWS</p>
+    </td>
+  </tr>
+</table>
+
+---
 
 <!-- 🧟‍♂️ Zombie GitHub Infiltration -->
 <div align="center">
@@ -123,6 +139,7 @@
 <div align="center">
   <img width=390 src="https://github-readme-stats.vercel.app/api?username=NicholasDobson&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10" alt="stats"/>
 </div>
+
 
 
 
