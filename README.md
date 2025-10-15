@@ -25,10 +25,10 @@
    <a href="https://github.com/NicholasDobson">
       <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-   <a href=""><!-- Add actual slack!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+   <a href="https://github.com/NicholasDobson"><!-- Add actual slack!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
       <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" />
   </a>
-  <a href=""><!-- Add actual discord later!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <a href="https://github.com/NicholasDobson"><!-- Add actual discord later!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
       <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
   </a>
 </div>
@@ -129,6 +129,7 @@
 <div align="center">
   <img width=390 src="https://github-readme-stats.vercel.app/api?username=NicholasDobson&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10" alt="stats"/>
 </div>
+
 
 
 
