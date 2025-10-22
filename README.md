@@ -31,6 +31,9 @@
   <a href="https://github.com/NicholasDobson"><!-- Add actual discord later!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
       <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
   </a>
+  <a href="https://drive.google.com/file/d/12nXgmVXutL1snr4U0Vs4v4ZPNTmitD3m/view?usp=sharing" target="_blank">
+  <img src="https://img.shields.io/badge/View_CV-0077B5?style=for-the-badge&logo=google-drive&logoColor=white" alt="View CV on Google Drive" />
+</a>
 </div>
 
 <hr/>
@@ -129,6 +132,7 @@
 <div align="center">
   <img width=390 src="https://github-readme-stats.vercel.app/api?username=NicholasDobson&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10" alt="stats"/>
 </div>
+
 
 
 
