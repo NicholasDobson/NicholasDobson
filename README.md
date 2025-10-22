@@ -8,9 +8,9 @@
 
 <div align="center">
 
-🔭 I’m currently working on **a chat bot** and **an online game aimbot** 
+🔭 I’ve been working on **a chat bot** and **an online game aimbot** 
 
-🌱 I’m currently learning **AWS services**  
+🌱 I’m currently using **AWS services**  
 
 💬 Ask me about **anything**  
 
@@ -129,6 +129,7 @@
 <div align="center">
   <img width=390 src="https://github-readme-stats.vercel.app/api?username=NicholasDobson&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10" alt="stats"/>
 </div>
+
 
 
 
