@@ -40,7 +40,7 @@
 
 <h2 align="center">🛠️ Languages · Frameworks · Tools </h2>
 <br/>
-
+<h4 align="center">Some frameworks dont have emblems</h4>
 <h3 align="center">💻 Frontend</h3>
 <div align="center">
   <a href="https://skillicons.dev">
@@ -118,7 +118,7 @@
   <br>
   
   - **Based on Platane/snk**: Built using the proven architecture from the famous snake contribution animation
-  - **Real GitHub Data**: Uses your actual contribution history  
+  - **Real GitHub Data**: Uses your actual contribution history when token is updated! Otherwise auto generated data  
   - **Zombie Theme**: Cells turn red and show infection effects when the zombie visits them
   - **Perfect Timing**: Infections happen exactly when the zombie moves over each cell
   - **Auto-Generated**: Updates automatically with my latest contributions
