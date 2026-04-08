@@ -40,7 +40,9 @@
 
 <h2 align="center">🛠️ Languages · Frameworks · Tools </h2>
 <br/>
-</body align="center">Some frameworks dont have emblems</b>
+<div style="text-align: center;">
+    <b>Some frameworks don't have emblems</b>
+</div>
 <h3 align="center">💻 Frontend</h3>
 <div align="center">
   <a href="https://skillicons.dev">
