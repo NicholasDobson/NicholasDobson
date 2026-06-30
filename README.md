@@ -14,7 +14,7 @@
 
 💬 Ask me about **anything**  
 
-⚡ Fun fact: **Some studies suggest left-handed programmers may have an edge in abstract problem-solving, which can help with debugging, systems design, or algorithms — especially in creative, non-linear environments like game development or AI.**
+⚡ Fun fact: **Some studies suggest left-handed programmers may have an edge in abstract problem-solving, which can help with debugging, systems design, or algorithms especially in creative, non-linear environments like game development or AI.**
 
 </div>
 
