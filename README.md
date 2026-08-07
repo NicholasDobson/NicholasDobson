@@ -101,7 +101,7 @@
 | Project | Overview | Link | Technologies |
 |:------:|:--------|:----:|:-----------|
 | ![Traffic Guardian Logo](https://github.com/COS301-SE-2025/Traffic-Guardian/blob/main/assets/TrafficGuardianLogo1_Light.PNG) | AWS-based system for real-time traffic monitoring and AI-driven incident detection. Client: AWS | [GitHub Repo](https://github.com/COS301-SE-2025/Traffic-Guardian) | Python, GitHub Actions, PostgreSQL, Real-Time APIs, AWS... |
-| ![Smart AgriCloud](https://github.com/NicholasDobson/IMY772Project/raw/main/AMR_Image.png) | Smart AgriCloud is a cloud-based Progressive Web Application (PWA) designed to support agricultural research through real-time environmental data processing, image-based plant health analysis, and secure, scalable cloud infrastructure. | [GitHub Repo](https://github.com/NicholasDobson/IMY772Project) | React, PWA, AWS Lambda,	API Gateway, S3, DynamoDB, RDS, AWS IAM GitHub Actions, AI	Image classification (ML) Client: UP Department of Plant and Soil Sciences |
+| ![Smart AgriCloud](https://github.com/NicholasDobson/IMY772Project/raw/main/AMR_Image.png) | Smart AgriCloud is a cloud-based Progressive Web Application (PWA) designed to support agricultural research through real-time environmental data processing, image-based plant health analysis, and secure, scalable cloud infrastructure.\n Client: UP Department of Plant and Soil Sciences | [GitHub Repo](https://github.com/NicholasDobson/IMY772Project) | React, PWA, AWS Lambda,	API Gateway, S3, DynamoDB, RDS, AWS IAM GitHub Actions, AI	Image classification (ML) |
 ---
 
 
